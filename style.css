@@ -41,27 +41,6 @@ header p {
   margin-bottom: 20px;
 }
 
-.mode-buttons {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.mode-buttons button {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #292936;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.mode-buttons button.active {
-  background: #6c4cff;
-}
-
 label {
   display: block;
   margin: 14px 0 8px;
@@ -71,7 +50,7 @@ label {
 
 textarea {
   width: 100%;
-  min-height: 150px;
+  min-height: 130px;
   resize: vertical;
   background: #101017;
   border: 1px solid #30303d;
@@ -105,21 +84,35 @@ select {
   outline: none;
 }
 
-.generate {
+.generate,
+.copy,
+.save {
   width: 100%;
-  margin-top: 22px;
+  margin-top: 18px;
   padding: 15px;
   border: none;
   border-radius: 12px;
-  background: #6c4cff;
   color: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.generate:active {
-  transform: scale(0.98);
+.generate {
+  background: #6c4cff;
+}
+
+.copy {
+  background: #292936;
+}
+
+.save {
+  background: #1f7a4d;
+}
+
+.generate:disabled {
+  opacity: 0.6;
+  cursor: wait;
 }
 
 #status {
@@ -127,6 +120,11 @@ select {
   margin-top: 15px;
   color: #aaa;
   font-size: 14px;
+}
+
+.lyrics-box {
+  min-height: 350px;
+  line-height: 1.7;
 }
 
 .projects h2 {
@@ -140,7 +138,21 @@ select {
   padding: 20px;
 }
 
+.project-item {
+  background: #101017;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  margin-top: 8px;
+  color: #aaa;
+  white-space: pre-wrap;
+}
+
 @media (max-width: 500px) {
+
   .app {
     padding: 14px;
   }
@@ -152,4 +164,5 @@ select {
   header h1 {
     font-size: 24px;
   }
+
 }
