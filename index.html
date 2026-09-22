@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <header>
+      <h1>🎬 AI Video Maker</h1>
+      <p>Text & Lyrics → Video</p>
+    </header>
+
+    <section class="card">
+
+      <div class="mode-buttons">
+        <button id="textMode" class="active">Text → Video</button>
+        <button id="lyricsMode">Lyrics → Video</button>
+      </div>
+
+      <label id="inputLabel">Enter your video idea</label>
+
+      <textarea
+        id="prompt"
+        placeholder="Example: A girl walking alone in the rain, cinematic night scene..."
+      ></textarea>
+
+      <div class="row">
+
+        <div>
+          <label>Style</label>
+          <select id="style">
+            <option>Cinematic</option>
+            <option>Realistic</option>
+            <option>Anime</option>
+            <option>3D Animation</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Ratio</label>
+          <select id="ratio">
+            <option value="9:16">9:16</option>
+            <option value="16:9">16:9</option>
+            <option value="1:1">1:1</option>
+          </select>
+        </div>
+
+      </div>
+
+      <label>Duration</label>
+
+      <select id="duration">
+        <option value="5">5 seconds</option>
+        <option value="10">10 seconds</option>
+        <option value="20">20 seconds</option>
+        <option value="30">30 seconds</option>
+      </select>
+
+      <button id="generateBtn" class="generate">
+        ✨ Generate Video
+      </button>
+
+      <div id="status"></div>
+
+    </section>
+
+    <section class="card projects">
+
+      <h2>📁 My Projects</h2>
+
+      <div id="projectList">
+        <p class="empty">No projects yet.</p>
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
