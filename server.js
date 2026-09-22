@@ -74,12 +74,13 @@ ${length}
 
 Requirements:
 
-- Write original lyrics only.
+- Write completely original lyrics.
 - Do not copy existing songs.
 - Use natural Indian songwriting.
 - Keep lines short and easy to sing.
 - Maintain a clear emotional flow.
 - Use sections:
+
 INTRO
 VERSE 1
 PRE-CHORUS
@@ -90,6 +91,7 @@ FINAL CHORUS
 OUTRO
 
 If singer is Duet, clearly separate:
+
 MALE:
 FEMALE:
 
@@ -99,13 +101,13 @@ Return only the lyrics.
 
 
     const response = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=" +
-  
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent",
       {
         method: "POST",
 
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
         },
 
         body: JSON.stringify({
@@ -125,25 +127,30 @@ Return only the lyrics.
 
     const responseText = await response.text();
 
-let data;
+    let data;
 
-try {
-  data = JSON.parse(responseText);
-} catch (parseError) {
+    try {
+      data = JSON.parse(responseText);
+    } catch (parseError) {
 
-  console.error("Gemini raw response:", responseText);
+      console.error(
+        "Gemini raw response:",
+        responseText
+      );
 
-  return res.status(500).json({
-    success: false,
-    message: "Gemini returned an invalid response"
-  });
-
-}
+      return res.status(500).json({
+        success: false,
+        message: "Gemini returned an invalid response"
+      });
+    }
 
 
     if (!response.ok) {
 
-      console.error("Gemini error:", data);
+      console.error(
+        "Gemini API error:",
+        data
+      );
 
       return res.status(response.status).json({
         success: false,
@@ -151,7 +158,6 @@ try {
           data?.error?.message ||
           "Gemini API request failed"
       });
-
     }
 
 
@@ -163,9 +169,8 @@ try {
 
       return res.status(500).json({
         success: false,
-        message: "No lyrics were generated"
+        message: "Gemini did not return lyrics"
       });
-
     }
 
 
@@ -177,11 +182,14 @@ try {
 
   } catch (error) {
 
-    console.error("Lyrics generation error:", error);
+    console.error(
+      "Lyrics generation error:",
+      error
+    );
 
     res.status(500).json({
       success: false,
-  message: error.message
+      message: error.message
     });
 
   }
