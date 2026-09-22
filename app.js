@@ -10,6 +10,8 @@ const status = document.getElementById("status");
 
 const copyBtn = document.getElementById("copyBtn");
 const saveBtn = document.getElementById("saveBtn");
+const regenerateBtn = document.getElementById("regenerateBtn");
+const clearBtn = document.getElementById("clearBtn");
 const projectList = document.getElementById("projectList");
 
 
@@ -250,3 +252,11 @@ function escapeHTML(text) {
 
 
 showProjects();
+regenerateBtn.addEventListener("click", () => {
+  generateLyrics();
+});
+
+clearBtn.addEventListener("click", () => {
+  lyrics.value = "";
+  status.textContent = "🗑️ Lyrics cleared.";
+});
