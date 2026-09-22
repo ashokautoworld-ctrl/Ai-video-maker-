@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Video Maker</title>
+  <title>AI Lyrics Maker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,70 +12,102 @@
   <div class="app">
 
     <header>
-      <h1>🎬 AI Video Maker</h1>
-      <p>Text & Lyrics → Video</p>
+      <h1>🎵 AI Lyrics Maker</h1>
+      <p>Create original songs with AI</p>
     </header>
 
     <section class="card">
 
-      <div class="mode-buttons">
-        <button id="textMode" class="active">Text → Video</button>
-        <button id="lyricsMode">Lyrics → Video</button>
-      </div>
-
-      <label id="inputLabel">Enter your video idea</label>
+      <label>Song Topic / Story</label>
 
       <textarea
-        id="prompt"
-        placeholder="Example: A girl walking alone in the rain, cinematic night scene..."
+        id="topic"
+        placeholder="Example: One-sided love, she left me without explanation..."
       ></textarea>
 
       <div class="row">
 
         <div>
-          <label>Style</label>
-          <select id="style">
-            <option>Cinematic</option>
-            <option>Realistic</option>
-            <option>Anime</option>
-            <option>3D Animation</option>
+          <label>Mood</label>
+          <select id="mood">
+            <option>Romantic</option>
+            <option>Sad</option>
+            <option>Breakup</option>
+            <option>Love</option>
+            <option>Emotional</option>
+            <option>Qawali</option>
           </select>
         </div>
 
         <div>
-          <label>Ratio</label>
-          <select id="ratio">
-            <option value="9:16">9:16</option>
-            <option value="16:9">16:9</option>
-            <option value="1:1">1:1</option>
+          <label>Singer</label>
+          <select id="singer">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Duet</option>
           </select>
         </div>
 
       </div>
 
-      <label>Duration</label>
+      <div class="row">
 
-      <select id="duration">
-        <option value="5">5 seconds</option>
-        <option value="10">10 seconds</option>
-        <option value="20">20 seconds</option>
-        <option value="30">30 seconds</option>
-      </select>
+        <div>
+          <label>Language</label>
+          <select id="language">
+            <option>Hindi</option>
+            <option>Urdu</option>
+            <option>Marathi</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Song Length</label>
+          <select id="length">
+            <option>Short</option>
+            <option>Medium</option>
+            <option>Full Song</option>
+          </select>
+        </div>
+
+      </div>
 
       <button id="generateBtn" class="generate">
-        ✨ Generate Video
+        ✨ Generate Lyrics
       </button>
 
       <div id="status"></div>
 
     </section>
 
+
+    <section class="card">
+
+      <label>Generated Lyrics</label>
+
+      <textarea
+        id="lyrics"
+        class="lyrics-box"
+        placeholder="Your generated lyrics will appear here..."
+      ></textarea>
+
+      <button id="copyBtn" class="copy">
+        📋 Copy Lyrics
+      </button>
+
+      <button id="saveBtn" class="save">
+        💾 Save Lyrics
+      </button>
+
+    </section>
+
+
     <section class="card projects">
 
-      <h2>📁 My Projects</h2>
+      <h2>📁 My Lyrics</h2>
 
       <div id="projectList">
-        <p class="empty">No projects yet.</p>
+        <p class="empty">No lyrics saved yet.</p>
       </div>
 
     </section>
