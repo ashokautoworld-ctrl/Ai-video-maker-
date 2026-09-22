@@ -139,13 +139,8 @@ Return only the lyrics.
       );
 return res.status(500).json({
   success: false,
-  message: "Gemini returned an invalid response"
+  message: "Gemini response: " + responseText.substring(0, 500)
 });
-      return res.status(500).json({
-        success: false,
-        message: "Gemini returned an invalid response"
-      });
-    }
 
 
     if (!response.ok) {
