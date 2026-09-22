@@ -1,147 +1,251 @@
-const textMode = document.getElementById("textMode");
-const lyricsMode = document.getElementById("lyricsMode");
-const inputLabel = document.getElementById("inputLabel");
-const prompt = document.getElementById("prompt");
+const topic = document.getElementById("topic");
+const mood = document.getElementById("mood");
+const singer = document.getElementById("singer");
+const language = document.getElementById("language");
+const length = document.getElementById("length");
+
 const generateBtn = document.getElementById("generateBtn");
+const lyrics = document.getElementById("lyrics");
 const status = document.getElementById("status");
+
+const copyBtn = document.getElementById("copyBtn");
+const saveBtn = document.getElementById("saveBtn");
 const projectList = document.getElementById("projectList");
 
-let currentMode = "text";
-
-textMode.addEventListener("click", () => {
-  currentMode = "text";
-
-  textMode.classList.add("active");
-  lyricsMode.classList.remove("active");
-
-  inputLabel.textContent = "Enter your video idea";
-
-  prompt.placeholder =
-    "Example: A girl walking alone in the rain, cinematic night scene...";
-});
-
-lyricsMode.addEventListener("click", () => {
-  currentMode = "lyrics";
-
-  lyricsMode.classList.add("active");
-  textMode.classList.remove("active");
-
-  inputLabel.textContent = "Paste your lyrics";
-
-  prompt.placeholder =
-    "Paste your full song lyrics here...";
-});
 
 generateBtn.addEventListener("click", async () => {
 
-  const input = prompt.value.trim();
-  const style = document.getElementById("style").value;
-  const ratio = document.getElementById("ratio").value;
-  const duration = document.getElementById("duration").value;
+  const songTopic = topic.value.trim();
 
-  if (!input) {
-    status.textContent = "⚠️ Please enter text or lyrics.";
+  if (!songTopic) {
+    status.textContent = "⚠️ Please enter your song topic.";
     return;
   }
 
   generateBtn.disabled = true;
-  generateBtn.textContent = "⏳ Preparing...";
-  status.textContent = "AI is preparing your video project...";
+  generateBtn.textContent = "⏳ Creating lyrics...";
+  status.textContent = "AI is preparing your song...";
 
-  const project = {
-    id: Date.now(),
-    mode: currentMode,
-    input: input,
-    style: style,
-    ratio: ratio,
-    duration: duration,
-    date: new Date().toLocaleString()
-  };
+  try {
 
-  saveProject(project);
+    const response = await fetch("/api/generate-lyrics", {
 
-  /*
-    Actual AI video generation will be connected here later.
-    For now, this creates and saves the project.
-  */
+      method: "POST",
 
-  setTimeout(() => {
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+
+        topic: songTopic,
+        mood: mood.value,
+        singer: singer.value,
+        language: language.value,
+        length: length.value
+
+      })
+
+    });
+
+
+    const data = await response.json();
+
+
+    if (!response.ok || !data.success) {
+
+      throw new Error(
+        data.message || "Lyrics generation failed."
+      );
+
+    }
+
+
+    lyrics.value = data.lyrics;
+
     status.textContent =
-      "✅ Project created. AI video generation will be connected next.";
+      "✅ Lyrics generated successfully!";
+
+  }
+
+  catch (error) {
+
+    console.error(error);
+
+    status.textContent =
+      "❌ " + error.message;
+
+  }
+
+  finally {
 
     generateBtn.disabled = false;
-    generateBtn.textContent = "✨ Generate Video";
+    generateBtn.textContent = "✨ Generate Lyrics";
 
-    prompt.value = "";
+  }
 
-    showProjects();
-  }, 1000);
 });
 
 
-function saveProject(project) {
+copyBtn.addEventListener("click", async () => {
+
+  const text = lyrics.value.trim();
+
+  if (!text) {
+
+    status.textContent =
+      "⚠️ No lyrics to copy.";
+
+    return;
+  }
+
+  try {
+
+    await navigator.clipboard.writeText(text);
+
+    status.textContent =
+      "✅ Lyrics copied!";
+
+  }
+
+  catch {
+
+    lyrics.select();
+    document.execCommand("copy");
+
+    status.textContent =
+      "✅ Lyrics copied!";
+
+  }
+
+});
+
+
+saveBtn.addEventListener("click", () => {
+
+  const text = lyrics.value.trim();
+
+  if (!text) {
+
+    status.textContent =
+      "⚠️ No lyrics to save.";
+
+    return;
+  }
+
+
+  const project = {
+
+    id: Date.now(),
+
+    topic: topic.value.trim(),
+
+    mood: mood.value,
+
+    singer: singer.value,
+
+    language: language.value,
+
+    length: length.value,
+
+    lyrics: text,
+
+    date: new Date().toLocaleString()
+
+  };
+
 
   let projects =
-    JSON.parse(localStorage.getItem("aiVideoProjects")) || [];
+    JSON.parse(
+      localStorage.getItem("aiLyricsProjects")
+    ) || [];
+
 
   projects.unshift(project);
 
+
   localStorage.setItem(
-    "aiVideoProjects",
+    "aiLyricsProjects",
     JSON.stringify(projects)
   );
-}
+
+
+  status.textContent =
+    "💾 Lyrics saved!";
+
+  showProjects();
+
+});
 
 
 function showProjects() {
 
-  let projects =
-    JSON.parse(localStorage.getItem("aiVideoProjects")) || [];
+  const projects =
+    JSON.parse(
+      localStorage.getItem("aiLyricsProjects")
+    ) || [];
+
 
   if (projects.length === 0) {
+
     projectList.innerHTML =
-      '<p class="empty">No projects yet.</p>';
+      '<p class="empty">No lyrics saved yet.</p>';
+
     return;
   }
 
+
   projectList.innerHTML = "";
+
 
   projects.forEach(project => {
 
-    const item = document.createElement("div");
+    const item =
+      document.createElement("div");
 
-    item.style.background = "#101017";
-    item.style.padding = "14px";
-    item.style.borderRadius = "10px";
-    item.style.marginBottom = "10px";
+    item.className =
+      "project-item";
+
 
     item.innerHTML = `
+
       <strong>
-        ${project.mode === "lyrics" ? "🎵 Lyrics" : "📝 Text"}
+        🎵 ${escapeHTML(project.topic)}
       </strong>
 
-      <p style="margin-top:8px;color:#aaa;">
-        ${escapeHTML(project.input.substring(0, 100))}
-        ${project.input.length > 100 ? "..." : ""}
+      <p>
+        ${escapeHTML(project.lyrics)}
       </p>
 
       <small style="color:#666;">
-        ${project.style} • ${project.ratio} • ${project.duration}s
+        ${escapeHTML(project.mood)}
+        •
+        ${escapeHTML(project.singer)}
+        •
+        ${escapeHTML(project.language)}
+        •
+        ${escapeHTML(project.date)}
       </small>
+
     `;
 
+
     projectList.appendChild(item);
+
   });
+
 }
 
 
 function escapeHTML(text) {
 
-  const div = document.createElement("div");
+  const div =
+    document.createElement("div");
 
   div.textContent = text;
 
   return div.innerHTML;
+
 }
 
 
