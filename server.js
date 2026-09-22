@@ -17,9 +17,7 @@ app.get("/api/status", (req, res) => {
 });
 
 
-// ===============================
-// AI LYRICS GENERATOR
-// ===============================
+// AI Lyrics Generator
 app.post("/api/generate-lyrics", async (req, res) => {
 
   try {
@@ -57,7 +55,7 @@ You are a professional Indian song lyricist.
 
 Create completely original song lyrics.
 
-Song topic/story:
+Topic:
 ${topic}
 
 Mood:
@@ -76,10 +74,9 @@ Requirements:
 
 - Write completely original lyrics.
 - Do not copy existing songs.
-- Use natural Indian songwriting.
 - Keep lines short and easy to sing.
-- Maintain a clear emotional flow.
-- Use sections:
+- Maintain a natural emotional flow.
+- Use clear sections:
 
 INTRO
 VERSE 1
@@ -90,18 +87,14 @@ BRIDGE
 FINAL CHORUS
 OUTRO
 
-If singer is Duet, clearly separate:
+If singer is Duet, clearly separate MALE and FEMALE.
 
-MALE:
-FEMALE:
-
-Do not add explanations.
 Return only the lyrics.
 `;
 
 
     const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent",
       {
         method: "POST",
 
@@ -131,16 +124,19 @@ Return only the lyrics.
 
     try {
       data = JSON.parse(responseText);
-    } catch (parseError) {
+    } catch (error) {
 
       console.error(
         "Gemini raw response:",
         responseText
       );
-return res.status(500).json({
-  success: false,
-  message: "Gemini response: " + responseText.substring(0, 500)
-});
+
+      return res.status(500).json({
+        success: false,
+        message: "Gemini returned an invalid response"
+      });
+
+    }
 
 
     if (!response.ok) {
@@ -156,6 +152,7 @@ return res.status(500).json({
           data?.error?.message ||
           "Gemini API request failed"
       });
+
     }
 
 
@@ -169,6 +166,7 @@ return res.status(500).json({
         success: false,
         message: "Gemini did not return lyrics"
       });
+
     }
 
 
