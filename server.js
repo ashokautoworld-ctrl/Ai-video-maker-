@@ -123,7 +123,22 @@ Return only the lyrics.
     );
 
 
-    const data = await response.json();
+    const responseText = await response.text();
+
+let data;
+
+try {
+  data = JSON.parse(responseText);
+} catch (parseError) {
+
+  console.error("Gemini raw response:", responseText);
+
+  return res.status(500).json({
+    success: false,
+    message: "Gemini returned an invalid response"
+  });
+
+}
 
 
     if (!response.ok) {
