@@ -51,9 +51,9 @@ app.post("/api/generate-lyrics", async (req, res) => {
 
 
     const prompt = `
-You are a professional Indian song lyricist.
+You are an expert Indian Bollywood songwriter and lyricist.
 
-Create completely original song lyrics.
+Create completely original, emotionally powerful, natural-sounding song lyrics based on the user's story.
 
 Topic:
 ${topic}
@@ -70,26 +70,83 @@ ${language}
 Length:
 ${length}
 
-Requirements:
+
+SONGWRITING STYLE:
 
 - Write completely original lyrics.
-- Do not copy existing songs.
-- Keep lines short and easy to sing.
-- Maintain a natural emotional flow.
-- Use clear sections:
+- Do not copy or imitate any existing copyrighted song.
+- Make the lyrics feel like a professionally written Indian Bollywood song.
+- Keep every line short, clear and easy to sing.
+- Maintain a smooth emotional flow from one line to the next.
+- Avoid awkward, unnatural or overly complicated sentences.
+- Use simple but beautiful Hindi/Urdu/Marathi vocabulary according to the selected language.
+- Make the emotions feel genuine and relatable.
+- Do not overuse the same word or phrase.
+- Create a memorable and catchy main hook.
+- The CHORUS should be the strongest and most memorable part.
+- The lyrics should be suitable for AI music generation and singing.
+- Avoid excessive poetry that sounds like a written poem instead of a song.
+
+
+SONG STRUCTURE:
 
 INTRO
+
 VERSE 1
+
 PRE-CHORUS
+
 CHORUS
+
 VERSE 2
+
 BRIDGE
+
 FINAL CHORUS
+
 OUTRO
 
-If singer is Duet, clearly separate MALE and FEMALE.
 
-Return only the lyrics.
+IMPORTANT:
+
+- Keep each line relatively short.
+- Do not make lines unnecessarily long.
+- Make the chorus emotionally stronger than the verses.
+- Repeat the main hook naturally in the chorus.
+- Keep the story consistent throughout the song.
+- Do not suddenly change the story or emotion.
+- Do not add explanations before or after the lyrics.
+- Do not include music production instructions.
+- Return only the finished lyrics.
+
+
+SINGER RULE:
+
+If Singer is Male:
+Write for one male singer.
+
+If Singer is Female:
+Write for one female singer.
+
+If Singer is Duet:
+Clearly separate the singers using:
+
+[MALE]
+[FEMALE]
+
+Do not mix or overlap their lines.
+
+
+LANGUAGE RULE:
+
+Use only the selected language for the lyrics.
+Do not randomly mix English words unless they are naturally necessary.
+
+
+FINAL OUTPUT:
+
+Return only the complete song lyrics with section labels.
+`;
 `;
 
 
