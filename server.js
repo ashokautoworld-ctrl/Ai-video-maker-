@@ -137,7 +137,10 @@ Return only the lyrics.
         "Gemini raw response:",
         responseText
       );
-
+return res.status(500).json({
+  success: false,
+  message: "Gemini returned an invalid response"
+});
       return res.status(500).json({
         success: false,
         message: "Gemini returned an invalid response"
