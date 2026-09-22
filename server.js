@@ -166,7 +166,7 @@ Return only the lyrics.
 
     res.status(500).json({
       success: false,
-      message: "Lyrics generation failed"
+  message: error.message
     });
 
   }
