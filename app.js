@@ -13,7 +13,8 @@ const saveBtn = document.getElementById("saveBtn");
 const regenerateBtn = document.getElementById("regenerateBtn");const newSongBtn = document.getElementById("newSongBtn");
 const clearBtn = document.getElementById("clearBtn");
 const projectList = document.getElementById("projectList");
-
+const songStyle = document.getElementById("songStyle");
+const voiceFeel = document.getElementById("voiceFeel");
 async function generateLyrics() {
   const songTopic = topic.value.trim();
 
@@ -35,15 +36,16 @@ async function generateLyrics() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        topic: songTopic,
-        mood: mood.value,
-        singer: singer.value,
-        language: language.value,
-        length: length.value
-      })
-    });
-
+      
+body: JSON.stringify({
+  topic: songTopic,
+  mood: mood.value,
+  singer: singer.value,
+  language: language.value,
+  length: length.value,
+  songStyle: songStyle.value,
+  voiceFeel: voiceFeel.value
+})
     const data = await response.json();
 
     if (!response.ok || !data.success) {
@@ -61,7 +63,7 @@ async function generateLyrics() {
     generateBtn.disabled = false;
     regenerateBtn.disabled = false;
 
-    generateBtn.textContent = "✨ Generate Lyrics";
+    gener kotent = "✨ Generate Lyrics";
     regenerateBtn.textContent = "🔄 Regenerate Lyrics";
   }
 }
