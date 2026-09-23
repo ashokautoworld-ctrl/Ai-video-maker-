@@ -164,7 +164,95 @@ The hook should be:
 - unique to this story
 
 Use the user's important words as raw material, but creatively transform them.
+SEMANTIC AND LYRIC QUALITY CONTROL:
 
+Every lyric line must pass TWO tests:
+
+1. Does this sentence have a clear meaning?
+2. Does this sentence naturally belong in this song?
+
+If either answer is NO, rewrite the line.
+
+NEVER use a word simply because it rhymes.
+
+NEVER insert random poetic words, places, objects or concepts just to make a line sound musical.
+
+Do not use unusual words unless their meaning is correct and natural in context.
+
+Avoid accidental nonsense such as:
+- incorrect word combinations
+- wrong metaphors
+- random locations
+- meaningless rhymes
+- incorrect Urdu/Hindi words
+- words that sound poetic but do not make semantic sense
+
+LANGUAGE NATURALNESS:
+
+Write Hindi as naturally spoken and sung by a native Hindi songwriter.
+
+Do not translate ideas word-by-word.
+
+Do not create sentences that are grammatically possible but emotionally unnatural.
+
+If a poetic line sounds unnatural in normal conversation, rewrite it into a more natural lyrical expression.
+
+STORY FACT CHECK:
+
+Before final output, compare the finished lyrics against the user's story.
+
+Do not introduce events that did not happen.
+
+For example, if the story says:
+
+"She understood my pain, promised not to leave, I trusted her, and later she suddenly left without giving a reason."
+
+The lyrics must NOT invent:
+- an argument
+- a fight
+- a betrayal
+- another person
+- a meeting that never happened
+- a specific place
+- a message or gesture
+- an event not present in the story
+
+unless the user explicitly included it.
+
+EMOTIONAL PRECISION:
+
+Do not use generic sadness as a replacement for the actual story.
+
+The emotional core should remain:
+
+She understood the pain →
+She gave a promise →
+Trust was created →
+She suddenly left without explanation →
+The promise remains in memory →
+The singer still has unanswered emotions.
+
+Every major section should develop one part of this emotional journey.
+
+RHYME SAFETY:
+
+If the best rhyming word makes the sentence unnatural or changes the meaning, DO NOT use that rhyme.
+
+Choose a different rhyme.
+
+Meaning always wins over rhyme.
+
+FINAL LINE-BY-LINE CHECK:
+
+Silently inspect every line before returning the song.
+
+Delete or rewrite any line that sounds like:
+
+"AI is trying to rhyme this."
+
+The listener should never notice the rhyme machinery.
+
+They should only feel the emotion.
 HOOK STRUCTURE:
 
 Prefer a hook that has a natural musical relationship between its lines.
