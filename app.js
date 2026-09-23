@@ -10,11 +10,13 @@ const status = document.getElementById("status");
 
 const copyBtn = document.getElementById("copyBtn");
 const saveBtn = document.getElementById("saveBtn");
-const regenerateBtn = document.getElementById("regenerateBtn");const newSongBtn = document.getElementById("newSongBtn");
+const regenerateBtn = document.getElementById("regenerateBtn");
+const newSongBtn = document.getElementById("newSongBtn");
 const clearBtn = document.getElementById("clearBtn");
 const projectList = document.getElementById("projectList");
 const songStyle = document.getElementById("songStyle");
 const voiceFeel = document.getElementById("voiceFeel");
+const structure = document.getElementById("structure");
 async function generateLyrics() {
   const songTopic = topic.value.trim();
 
@@ -109,6 +111,7 @@ saveBtn.addEventListener("click", () => {
     language: language.value,
     length: length.value,
     lyrics: text,
+    structure: structure.value,
     date: new Date().toLocaleString()
     songStyle: songStyle.value,
 voiceFeel: voiceFeel.value,
@@ -202,7 +205,8 @@ function openProject(id) {
   mood.value = project.mood;
   singer.value = project.singer;
   language.value = project.language;
-  length.value = project.length;songStyle.value = project.songStyle || "Bollywood";
+  length.value = project.length;
+  songStyle.value = project.songStyle || "Bollywood";
 voiceFeel.value = project.voiceFeel || "Natural";
   lyrics.value = project.lyrics;
 
@@ -250,7 +254,7 @@ function escapeHTML(text) {
 }
 
 newSongBtn.addEventListener("click", () => {
-
+structure.value = "Full Song";
   topic.value = "";
   lyrics.value = "";
 
