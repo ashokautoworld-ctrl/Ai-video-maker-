@@ -17,12 +17,14 @@ app.get("/api/status", (req, res) => {
 app.post("/api/generate-lyrics", async (req, res) => {
   try {
     const {
-      topic,
-      mood,
-      singer,
-      language,
-      length
-    } = req.body;
+  topic,
+  mood,
+  singer,
+  language,
+  length,
+  songStyle,
+  voiceFeel
+} = req.body;
 
     if (!topic) {
       return res.status(400).json({
@@ -59,7 +61,21 @@ ${language}
 
 LENGTH:
 ${length}
+SONG STYLE:
+${songStyle}
 
+VOICE FEEL:
+${voiceFeel}
+SONG STYLE RULE:
+
+- Follow the selected song style naturally.
+- Bollywood: cinematic Indian film-song expression.
+- Romantic: melodic and intimate romantic expression.
+- Acoustic: simple, intimate and conversational.
+- Qawali: expressive qawali-style energy where appropriate.
+- Sufi: mystical and metaphorical emotional expression without forcing religious language.
+- Orchestral: cinematic and emotionally expansive writing.
+- High Beat: short, catchy and rhythm-friendly lines.
 Write professional, original, musical lyrics.
 
 IMPORTANT:
