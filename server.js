@@ -24,6 +24,33 @@ app.post("/api/generate-lyrics", async (req, res) => {
   length,
   songStyle,
   voiceFeel
+      STYLE GUIDANCE:
+
+Adapt the lyrics to the selected Song Style.
+
+Bollywood:
+Use cinematic, melodic and emotionally expressive songwriting.
+
+Romantic:
+Use intimate, graceful and warm romantic expression.
+
+Acoustic:
+Use simple, intimate and conversational lyrics with natural imagery.
+
+Qawali:
+Use rhythmic, powerful and expressive phrasing with call-and-response potential where appropriate.
+
+Sufi:
+Use spiritual, introspective and symbolic expression, with meaningful imagery and emotional depth.
+Do not make every Sufi song devotional.
+
+Orchestral:
+Use cinematic emotional progression and imagery suitable for a larger melodic arrangement.
+
+High Beat:
+Use energetic, catchy and rhythm-friendly short lines while keeping the lyrics meaningful.
+
+Adapt the writing to the selected Voice Feel without changing the story.
 } = req.body;
 
     if (!topic) {
