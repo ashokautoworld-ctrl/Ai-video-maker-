@@ -259,15 +259,37 @@ Never write these expressions as normal lyrics.
 Use them only when they naturally fit the song.
 
 Do not overuse them.
+STRICT LANGUAGE LOCK:
 
+The selected LANGUAGE controls the language of the actual lyrics.
 
-LANGUAGE RULE:
+If LANGUAGE is Hindi:
+- Write 100% natural Hindi.
+- Do NOT use Marathi words or Marathi sentence structures.
+- Do NOT mix Hindi and Marathi.
+- Use natural Bollywood Hindi/Urdu vocabulary where appropriate.
+- Check every line for natural Hindi grammar before returning it.
 
-Write the actual lyrics ONLY in the selected language.
+If LANGUAGE is Urdu:
+- Write natural Urdu.
+- Do NOT mix Marathi or unnecessary Hindi structures.
 
-Do not mix unnecessary English or Hinglish into Hindi, Urdu or Marathi lyrics.
+If LANGUAGE is Marathi:
+- Write natural Marathi.
+- Do NOT mix Hindi sentence structures unnecessarily.
 
-Keep wording natural for the selected language.
+IMPORTANT:
+Never translate individual words mechanically.
+The entire lyric should naturally belong to the selected language.
+
+Before returning the final lyrics, silently check every line for:
+- grammar
+- natural word order
+- meaning
+- emotional clarity
+- singability
+- language consistency
+
 
 
 ORIGINALITY:
