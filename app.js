@@ -110,6 +110,8 @@ saveBtn.addEventListener("click", () => {
     length: length.value,
     lyrics: text,
     date: new Date().toLocaleString()
+    songStyle: songStyle.value,
+voiceFeel: voiceFeel.value,
   };
 
   let projects =
@@ -200,7 +202,8 @@ function openProject(id) {
   mood.value = project.mood;
   singer.value = project.singer;
   language.value = project.language;
-  length.value = project.length;
+  length.value = project.length;songStyle.value = project.songStyle || "Bollywood";
+voiceFeel.value = project.voiceFeel || "Natural";
   lyrics.value = project.lyrics;
 
   status.textContent = "📂 Lyrics opened for editing.";
