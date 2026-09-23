@@ -1,31 +1,23 @@
 const express = require("express");
-const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
-
-app.get("/api/status", (req, res) => {
-  res.json({
-    success: true,
-    message: "AI Lyrics Maker server is running"
-  });
-});
+app.use(express.static(__dirname));
 
 app.post("/api/generate-lyrics", async (req, res) => {
   try {
-  const {
-  topic,
-  mood,
-  singer,
-  language,
-  length,
-  songStyle,
-  voiceFeel
-    
-      
+    const {
+      topic,
+      mood,
+      singer,
+      language,
+      length,
+      songStyle,
+      voiceFeel,
+      structure
+    } = req.body;
 
     if (!topic) {
       return res.status(400).json({
@@ -44,9 +36,41 @@ app.post("/api/generate-lyrics", async (req, res) => {
     }
 
     const prompt = `
-You are a professional Indian Bollywood songwriter.
+You are a professional Bollywood songwriter and lyricist.
 
-Create completely original song lyrics based on the user's story.
+Write completely original song lyrics based on the user's story.
+
+IMPORTANT WRITING APPROACH:
+Do not simply paraphrase the user's story.
+
+First understand the situation and emotion.
+Then transform that emotion into natural, musical songwriting.
+
+Use:
+- meaningful imagery
+- metaphors
+- personification
+- visual storytelling
+- emotional details
+- situation-specific expressions
+
+Do not use the same generic metaphors in every song.
+Avoid automatically repeating moon, rain, stars, shadow, loneliness, etc.
+Choose imagery that fits the actual story.
+
+Direct emotional lines are allowed when they sound stronger and more natural.
+
+LYRIC STYLE:
+- Bollywood song feeling
+- emotionally expressive
+- natural human songwriting
+- memorable hook
+- short and clear lines
+- smooth rhyme and flow
+- easy to sing
+- medium-tempo melodic feel
+- strong emotional progression
+- avoid awkward or overly complicated sentences
 
 TOPIC:
 ${topic}
@@ -62,22 +86,15 @@ ${language}
 
 LENGTH:
 ${length}
+
 SONG STYLE:
 ${songStyle}
 
 VOICE FEEL:
 ${voiceFeel}
-SONG STYLE RULE:
 
-- Follow the selected song style naturally.
-- Bollywood: cinematic Indian film-song expression.
-- Romantic: melodic and intimate romantic expression.
-- Acoustic: simple, intimate and conversational.
-- Qawali: expressive qawali-style energy where appropriate.
-- Sufi: mystical and metaphorical emotional expression without forcing religious language.
-- Orchestral: cinematic and emotionally expansive writing.
-- High Beat: short, catchy and rhythm-friendly lines.
-Write professional, original, musical lyrics.
+SONG STRUCTURE:
+${structure}
 
 STYLE GUIDANCE:
 
@@ -96,7 +113,7 @@ Qawali:
 Use rhythmic, powerful and expressive phrasing with call-and-response potential where appropriate.
 
 Sufi:
-Use spiritual, introspective and symbolic expression, with meaningful imagery and emotional depth.
+Use spiritual, introspective and symbolic expression with meaningful imagery and emotional depth.
 Do not make every Sufi song devotional.
 
 Orchestral:
@@ -107,95 +124,73 @@ Use energetic, catchy and rhythm-friendly short lines while keeping the lyrics m
 
 Adapt the writing to the selected Voice Feel without changing the story.
 
-IMPORTANT:
-- Understand the situation and emotion first.
-- Do not simply convert the topic into direct sentences.
-- Use metaphor, personification, imagery, symbolism or visual storytelling when they genuinely improve the emotion.
-- Do not force metaphors into every line.
-- Use fresh imagery specific to this story.
-- Avoid repeating common Bollywood clichés unnecessarily.
-- Keep lines short, clear and easy to sing.
-- Create a memorable hook.
-- Chorus should be stronger than verses.
-- Maintain natural rhyme and flow.
-- Do not use random filler words.
-- Keep the emotional progression natural.
-- Write naturally in the selected language.
-- Do not randomly mix languages.
+SINGER RULES:
 
-For Hindi:
-Use natural Hindi/Hindustani Bollywood songwriting language.
+If Male:
+Write from a natural male perspective.
 
-For Urdu:
-Use graceful natural Urdu vocabulary.
+If Female:
+Write from a natural female perspective.
 
-For Marathi:
-Use authentic natural Marathi expressions.
+If Duet:
+Clearly separate voices using:
+[MALE]
+[FEMALE]
+[BACKGROUND VOCALS]
 
-SINGER RULE:
-Male = natural male perspective.
-Female = natural female perspective.
-Duet = clearly separate [MALE] and [FEMALE] sections. Do not overlap their main lines.
+Do not overlap male and female lines.
+Give each singer a clear separate part.
 
 SONG STRUCTURE:
 
+Use appropriate sections such as:
+
 [INTRO]
-
 [VERSE 1]
-
 [PRE-CHORUS]
-
 [CHORUS]
-
-[BACKGROUND VOCALS]
-
 [VERSE 2]
-
 [BRIDGE]
-
 [FINAL CHORUS]
-
 [OUTRO]
 
-Use only the sections that genuinely fit.
+Do not force every section if the selected structure is shorter.
 
-MUSICAL EXPRESSIONS:
-
-If appropriate, use:
+If using musical vocal expressions, clearly mark them as:
 [SARGAM]
 [MURKI]
 [MEEND]
 [VOCAL RUN]
 
-These must be clearly separated from normal lyrics.
+Do not write these expressions as normal lyric words.
 
-Do not force these into every song.
+QUALITY CHECK BEFORE FINAL OUTPUT:
 
-BACKGROUND VOCALS:
-Use them only when they naturally enhance the song.
-Keep them short and separate from the lead singer.
-Do not use the same pattern in every song.
-
-ORIGINALITY:
-Every song must feel newly written for this specific story.
-Do not copy existing songs, lyrics, melodies or distinctive phrases.
+Make sure:
+- Lyrics are original.
+- Story and emotion are preserved.
+- Lines are short and singable.
+- Hook is memorable.
+- Flow feels natural.
+- No unnecessary repetition.
+- No generic filler.
+- Language is natural.
+- Lyrics feel like a professionally written song.
 
 Return ONLY the finished lyrics.
-Do not add explanations or notes.
+Do not add explanations, notes, comments, music production instructions, or AI-related text.
 `;
 
     const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${apiKey}`,
           "HTTP-Referer": "https://ai-video-maker.onrender.com",
           "X-Title": "AI Lyrics Maker"
         },
-
         body: JSON.stringify({
           model: "openrouter/free",
           messages: [
@@ -208,40 +203,19 @@ Do not add explanations or notes.
       }
     );
 
-    const responseText = await response.text();
-
-    let data;
-
-    try {
-      data = JSON.parse(responseText);
-    } catch (error) {
-      console.error("OpenRouter raw response:", responseText);
-
-      return res.status(500).json({
-        success: false,
-        message: "OpenRouter returned an invalid response"
-      });
-    }
+    const data = await response.json();
 
     if (!response.ok) {
-      console.error("OpenRouter API error:", data);
-
-      return res.status(response.status).json({
-        success: false,
-        message:
-          data?.error?.message ||
-          "OpenRouter API request failed"
-      });
+      throw new Error(
+        data?.error?.message || "OpenRouter request failed"
+      );
     }
-console.log("OpenRouter response:", JSON.stringify(data));
+
     const generatedLyrics =
-      data?.choices?.[0]?.message?.content;
+      data?.choices?.[0]?.message?.content?.trim();
 
     if (!generatedLyrics) {
-      return res.status(500).json({
-        success: false,
-        message: "OpenRouter did not return lyrics"
-      });
+      throw new Error("No lyrics were generated");
     }
 
     res.json({
@@ -254,13 +228,11 @@ console.log("OpenRouter response:", JSON.stringify(data));
 
     res.status(500).json({
       success: false,
-      message: error.message
+      message: error.message || "Lyrics generation failed"
     });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(
-    `🎵 AI Lyrics Maker running on port ${PORT}`
-  );
+  console.log(`AI Lyrics Maker running on port ${PORT}`);
 });
