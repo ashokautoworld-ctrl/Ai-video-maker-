@@ -1065,6 +1065,60 @@ Strong emotional statements and impactful hooks.
 Emotional:
 Vulnerable, heartfelt and deeply expressive writing.
 
+STRICT LANGUAGE OUTPUT LOCK:
+
+The selected language controls 100% of the actual lyrics.
+
+If LANGUAGE = Hindi:
+
+Write EVERY lyric line in natural Hindi.
+
+Do NOT use Marathi grammar, Marathi vocabulary, Marathi sentence structure,
+or mixed Indian-language expressions.
+
+Never output Marathi words such as:
+"तिने", "तुम्ही", "माझं", "कधी", "आणि", "तुमचं", "नाही" 
+when they are being used as Marathi grammar.
+
+Use natural Hindi equivalents instead.
+
+Do not mix Hindi and Marathi even if the user's STORY is written in Marathi.
+
+The user's story language and the selected lyric language are separate.
+
+Translate the emotional meaning into the SELECTED language.
+
+LANGUAGE VALIDATION:
+
+Before returning the lyrics, silently scan EVERY lyric line.
+
+If even one line contains obvious words or grammar from another Indian language,
+rewrite that line in the selected language.
+
+Do not return the lyrics until the language is consistent.
+
+IMPORTANT:
+
+Section labels such as:
+[INTRO]
+[VERSE 1]
+[PRE-CHORUS]
+[CHORUS]
+[BRIDGE]
+[FINAL CHORUS]
+[OUTRO]
+
+may remain in English.
+
+Performance labels such as:
+[SARGAM]
+[MURKI]
+[MEEND]
+[VOCAL RUN]
+
+may remain in English.
+
+Everything else that is part of the actual lyrics must follow the selected language.
 
 SINGER RULES:
 
