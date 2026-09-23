@@ -230,3 +230,18 @@ select {
     flex-direction: column;
   }
 }
+.new-song {
+  margin-top: 15px;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #1f7a4d;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-song:active {
+  transform: scale(0.97);
+}
