@@ -196,3 +196,37 @@ select {
   opacity: 0.6;
   cursor: wait;
 }
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.project-actions button {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.open-project {
+  background: #3157d5;
+}
+
+.delete-project {
+  background: #8b3030;
+}
+
+.project-actions button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 500px) {
+  .project-actions {
+    flex-direction: column;
+  }
+}
