@@ -10,7 +10,7 @@ const status = document.getElementById("status");
 
 const copyBtn = document.getElementById("copyBtn");
 const saveBtn = document.getElementById("saveBtn");
-const regenerateBtn = document.getElementById("regenerateBtn");
+const regenerateBtn = document.getElementById("regenerateBtn");const newSongBtn = document.getElementById("newSongBtn");
 const clearBtn = document.getElementById("clearBtn");
 const projectList = document.getElementById("projectList");
 
