@@ -14,356 +14,235 @@ const regenerateBtn = document.getElementById("regenerateBtn");
 const clearBtn = document.getElementById("clearBtn");
 const projectList = document.getElementById("projectList");
 
-
-// ===============================
-// GENERATE LYRICS
-// ===============================
-
 async function generateLyrics() {
-
   const songTopic = topic.value.trim();
 
   if (!songTopic) {
-    status.textContent =
-      "⚠️ Please enter your song topic.";
+    status.textContent = "⚠️ Please enter your song topic.";
     return;
   }
 
   generateBtn.disabled = true;
   regenerateBtn.disabled = true;
 
-  generateBtn.textContent =
-    "⏳ Creating lyrics...";
-
-  regenerateBtn.textContent =
-    "⏳ Creating...";
-
-  status.textContent =
-    "AI is preparing your song...";
-
+  generateBtn.textContent = "⏳ Creating lyrics...";
+  regenerateBtn.textContent = "⏳ Creating...";
+  status.textContent = "AI is preparing your song...";
 
   try {
-
-    const response = await fetch(
-      "/api/generate-lyrics",
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify({
-
-          topic: songTopic,
-          mood: mood.value,
-          singer: singer.value,
-          language: language.value,
-          length: length.value
-
-        })
-
-      }
-    );
-
+    const response = await fetch("/api/generate-lyrics", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        topic: songTopic,
+        mood: mood.value,
+        singer: singer.value,
+        language: language.value,
+        length: length.value
+      })
+    });
 
     const data = await response.json();
 
-
     if (!response.ok || !data.success) {
-
-      throw new Error(
-        data.message ||
-        "Lyrics generation failed."
-      );
-
+      throw new Error(data.message || "Lyrics generation failed.");
     }
 
-
     lyrics.value = data.lyrics;
-
-
-    status.textContent =
-      "✅ Lyrics generated successfully!";
-
-
+    status.textContent = "✅ Lyrics generated successfully!";
   }
-
   catch (error) {
-
     console.error(error);
-
-    status.textContent =
-      "❌ " + error.message;
-
+    status.textContent = "❌ " + error.message;
   }
-
   finally {
-
     generateBtn.disabled = false;
     regenerateBtn.disabled = false;
 
-    generateBtn.textContent =
-      "✨ Generate Lyrics";
-
-    regenerateBtn.textContent =
-      "🔄 Regenerate Lyrics";
-
+    generateBtn.textContent = "✨ Generate Lyrics";
+    regenerateBtn.textContent = "🔄 Regenerate Lyrics";
   }
-
 }
 
+generateBtn.addEventListener("click", generateLyrics);
 
-// Generate button
-generateBtn.addEventListener(
-  "click",
-  () => {
-    generateLyrics();
+regenerateBtn.addEventListener("click", generateLyrics);
+
+
+copyBtn.addEventListener("click", async () => {
+  const text = lyrics.value.trim();
+
+  if (!text) {
+    status.textContent = "⚠️ No lyrics to copy.";
+    return;
   }
-);
 
-
-// Regenerate button
-regenerateBtn.addEventListener(
-  "click",
-  () => {
-    generateLyrics();
+  try {
+    await navigator.clipboard.writeText(text);
+    status.textContent = "✅ Lyrics copied!";
   }
-);
-
-
-// ===============================
-// COPY LYRICS
-// ===============================
-
-copyBtn.addEventListener(
-  "click",
-  async () => {
-
-    const text =
-      lyrics.value.trim();
-
-
-    if (!text) {
-
-      status.textContent =
-        "⚠️ No lyrics to copy.";
-
-      return;
-
-    }
-
-
-    try {
-
-      await navigator.clipboard.writeText(
-        text
-      );
-
-      status.textContent =
-        "✅ Lyrics copied!";
-
-    }
-
-    catch {
-
-      lyrics.select();
-
-      document.execCommand("copy");
-
-      status.textContent =
-        "✅ Lyrics copied!";
-
-    }
-
+  catch {
+    lyrics.select();
+    document.execCommand("copy");
+    status.textContent = "✅ Lyrics copied!";
   }
-);
+});
 
 
-// ===============================
-// SAVE LYRICS
-// ===============================
+saveBtn.addEventListener("click", () => {
+  const text = lyrics.value.trim();
 
-saveBtn.addEventListener(
-  "click",
-  () => {
-
-    const text =
-      lyrics.value.trim();
-
-
-    if (!text) {
-
-      status.textContent =
-        "⚠️ No lyrics to save.";
-
-      return;
-
-    }
-
-
-    const project = {
-
-      id: Date.now(),
-
-      topic:
-        topic.value.trim(),
-
-      mood:
-        mood.value,
-
-      singer:
-        singer.value,
-
-      language:
-        language.value,
-
-      length:
-        length.value,
-
-      lyrics:
-        text,
-
-      date:
-        new Date().toLocaleString()
-
-    };
-
-
-    let projects =
-      JSON.parse(
-        localStorage.getItem(
-          "aiLyricsProjects"
-        )
-      ) || [];
-
-
-    projects.unshift(project);
-
-
-    localStorage.setItem(
-      "aiLyricsProjects",
-      JSON.stringify(projects)
-    );
-
-
-    status.textContent =
-      "💾 Lyrics saved!";
-
-
-    showProjects();
-
+  if (!text) {
+    status.textContent = "⚠️ No lyrics to save.";
+    return;
   }
-);
+
+  const project = {
+    id: Date.now(),
+    topic: topic.value.trim(),
+    mood: mood.value,
+    singer: singer.value,
+    language: language.value,
+    length: length.value,
+    lyrics: text,
+    date: new Date().toLocaleString()
+  };
+
+  let projects =
+    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
+
+  projects.unshift(project);
+
+  localStorage.setItem(
+    "aiLyricsProjects",
+    JSON.stringify(projects)
+  );
+
+  status.textContent = "💾 Lyrics saved!";
+  showProjects();
+});
 
 
-// ===============================
-// CLEAR LYRICS
-// ===============================
+clearBtn.addEventListener("click", () => {
+  lyrics.value = "";
+  status.textContent = "🗑️ Lyrics cleared.";
+});
 
-clearBtn.addEventListener(
-  "click",
-  () => {
-
-    lyrics.value = "";
-
-    status.textContent =
-      "🗑️ Lyrics cleared.";
-
-  }
-);
-
-
-// ===============================
-// SHOW SAVED PROJECTS
-// ===============================
 
 function showProjects() {
-
   const projects =
-    JSON.parse(
-      localStorage.getItem(
-        "aiLyricsProjects"
-      )
-    ) || [];
-
+    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
 
   if (projects.length === 0) {
-
     projectList.innerHTML =
       '<p class="empty">No lyrics saved yet.</p>';
-
     return;
-
   }
-
 
   projectList.innerHTML = "";
 
+  projects.forEach(project => {
 
-  projects.forEach(
-    project => {
+    const item = document.createElement("div");
+    item.className = "project-item";
 
-      const item =
-        document.createElement(
-          "div"
-        );
+    item.innerHTML = `
+      <strong>🎵 ${escapeHTML(project.topic)}</strong>
 
+      <p>${escapeHTML(project.lyrics)}</p>
 
-      item.className =
-        "project-item";
+      <small style="color:#666;">
+        ${escapeHTML(project.mood)}
+        •
+        ${escapeHTML(project.singer)}
+        •
+        ${escapeHTML(project.language)}
+        •
+        ${escapeHTML(project.date)}
+      </small>
 
+      <div class="project-actions">
 
-      item.innerHTML = `
+        <button
+          class="open-project"
+          onclick="openProject(${project.id})">
+          📂 Open / Edit
+        </button>
 
-        <strong>
-          🎵 ${escapeHTML(project.topic)}
-        </strong>
+        <button
+          class="delete-project"
+          onclick="deleteProject(${project.id})">
+          🗑️ Delete
+        </button>
 
-        <p>
-          ${escapeHTML(project.lyrics)}
-        </p>
+      </div>
+    `;
 
-        <small style="color:#666;">
-          ${escapeHTML(project.mood)}
-          •
-          ${escapeHTML(project.singer)}
-          •
-          ${escapeHTML(project.language)}
-          •
-          ${escapeHTML(project.date)}
-        </small>
-
-      `;
-
-
-      projectList.appendChild(
-        item
-      );
-
-    }
-  );
-
+    projectList.appendChild(item);
+  });
 }
 
 
-// ===============================
-// SECURITY
-// ===============================
+function openProject(id) {
+
+  const projects =
+    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
+
+  const project = projects.find(p => p.id === id);
+
+  if (!project) return;
+
+  topic.value = project.topic;
+  mood.value = project.mood;
+  singer.value = project.singer;
+  language.value = project.language;
+  length.value = project.length;
+  lyrics.value = project.lyrics;
+
+  status.textContent = "📂 Lyrics opened for editing.";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+function deleteProject(id) {
+
+  const confirmDelete =
+    confirm("Delete this saved lyrics?");
+
+  if (!confirmDelete) return;
+
+  let projects =
+    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
+
+  projects = projects.filter(
+    project => project.id !== id
+  );
+
+  localStorage.setItem(
+    "aiLyricsProjects",
+    JSON.stringify(projects)
+  );
+
+  status.textContent = "🗑️ Lyrics deleted.";
+
+  showProjects();
+}
+
 
 function escapeHTML(text) {
 
-  const div =
-    document.createElement(
-      "div"
-    );
+  const div = document.createElement("div");
 
   div.textContent = text;
 
   return div.innerHTML;
-
 }
 
 
-// Load saved projects
 showProjects();
