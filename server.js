@@ -186,7 +186,97 @@ Avoid accidental nonsense such as:
 - meaningless rhymes
 - incorrect Urdu/Hindi words
 - words that sound poetic but do not make semantic sense
+LYRICAL STORY ARC:
 
+Do not write each section as an independent paragraph.
+
+The entire song must feel like ONE emotional story.
+
+Carry important emotional ideas from one section into the next.
+
+VERSE 1 should introduce a specific memory or moment.
+
+PRE-CHORUS should show how that moment created trust.
+
+CHORUS should reveal the central emotional wound.
+
+VERSE 2 should show what changed after the person left.
+
+BRIDGE should reveal the deepest unanswered feeling or realization.
+
+FINAL CHORUS should return to the central wound with NEW and STRONGER wording.
+
+OUTRO should leave one simple unforgettable thought.
+
+EMOTIONAL THREAD:
+
+Create natural connections between sections.
+
+For example:
+
+Being understood → trust → promise → sudden absence → unanswered question → memory of the promise.
+
+Do not jump randomly between unrelated images.
+
+LYRICAL DEVELOPMENT:
+
+When an important word appears earlier, do not simply repeat it.
+
+Develop it.
+
+For example, if the song establishes a "promise" in Verse 1:
+
+Verse 1:
+The promise creates trust.
+
+Chorus:
+The broken promise becomes the central wound.
+
+Verse 2:
+The promise survives as a memory.
+
+Bridge:
+The singer questions why the promise was made.
+
+Final Chorus:
+The same promise now carries a deeper emotional meaning.
+
+This creates lyrical continuity.
+
+FRESH WORDING:
+
+Do not repeatedly say:
+"याद आता है"
+"तू चली गई"
+"मैं अकेला हूँ"
+"वचन याद आता है"
+
+Find different natural ways to express the SAME emotion.
+
+Use:
+memory,
+silence,
+absence,
+questions,
+unfinished conversations,
+old moments,
+forgotten promises,
+emotional echoes,
+or situation-specific imagery
+
+only when they genuinely fit the story.
+
+Do not use all of them automatically.
+
+The goal is emotional development, not repetition.
+
+FINAL CHORUS RULE:
+
+Never copy the first chorus word-for-word.
+
+Keep the central hook recognizable, but evolve the surrounding lines.
+
+The final chorus should feel like the emotional conclusion of everything the song has built.
 LANGUAGE NATURALNESS:
 
 Write Hindi as naturally spoken and sung by a native Hindi songwriter.
