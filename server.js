@@ -188,7 +188,7 @@ Do not add explanations or notes.
           "OpenRouter API request failed"
       });
     }
-
+console.log("OpenRouter response:", JSON.stringify(data));
     const generatedLyrics =
       data?.choices?.[0]?.message?.content;
 
