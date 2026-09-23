@@ -81,39 +81,31 @@ LENGTH:
 ${length}
 
 
+================================
+PROFESSIONAL SONGWRITING RULES
+================================
+
+
 MUSIC FEEL:
 
-- Write for a medium-tempo melody.
+- Write for a medium-tempo melody unless the story or mood clearly requires otherwise.
 - The song should feel musical, smooth and natural.
-- Avoid extremely slow or extremely fast lyrical phrasing.
+- Avoid extremely slow or extremely fast lyrical phrasing unless appropriate for the requested mood.
 - Keep the vocal flow comfortable for singing.
 - Keep lines short and clear.
 - Avoid long sentences that are difficult to sing.
 - Create a memorable melodic hook.
-- Use tasteful sargam and murki phrases where they naturally fit the song's melody and emotion.
 - Make the chorus emotionally stronger than the verses.
 
 
-LYRICAL STYLE:
-
-- Write completely original lyrics.
-- Do not copy existing songs.
-- Make it feel like a professionally written Bollywood song.
-- Use simple, natural and beautiful language.
-- Keep the story consistent from beginning to end.
-- Avoid awkward rhymes.
-- Use natural rhymes only when they improve the song.
-- Make the lyrics sound like a SONG, not like a poem.
-- Create a strong emotional hook.
-- Keep the lyrics suitable for AI music generation.
 CREATIVE LYRIC EXPRESSION:
 
-Do not simply convert the user's story into direct statements.
-
-First understand the situation, emotion and hidden meaning of each moment.
-Then transform important emotional statements into memorable lyrical expressions using the technique that best fits that particular situation.
+- Do not simply convert the user's story into direct statements.
+- First understand the situation, emotion and hidden meaning of each important moment.
+- Then transform important emotional ideas into memorable lyrical expressions using the technique that best fits that particular situation.
 
 Possible techniques include:
+
 - Metaphor
 - Personification
 - Simile
@@ -125,26 +117,260 @@ Possible techniques include:
 - Contrast
 - Wordplay
 
-For example:
+When a simple emotional statement can become more powerful through imagery or metaphor, express the same meaning creatively.
 
-Simple idea:
-"I saw your photo and remembered you."
+However:
 
-Instead of writing the idea literally, transform it into a fresh lyrical image such as:
-"जुन्या अल्बमच्या पानांनी, तुझं नाव पुन्हा घेतलं."
-
-This is only an example. Never reuse this exact line or its metaphor in another song.
-- Use tasteful sargam and murki phrases where they naturally fit the song's melody and emotion.
-IMPORTANT:
-
-- Choose the technique according to the specific situation.
 - Do not force a metaphor into every line.
 - Some lines should remain simple and conversational when that feels more natural.
-- Use metaphor or imagery mainly where it makes the emotion deeper or more memorable.
-- Do not repeatedly use the same common images such as moon, rain, stars, darkness, shadows or loneliness unless they genuinely belong to the story.
-- Create fresh and situation-specific imagery for every new song.
-- Preserve the original meaning and emotion while making the expression more lyrical.
-- The result should feel like a professional songwriter interpreted the situation creatively, not like AI simply paraphrased the user's words.
+- Preserve the original meaning and emotion.
+- The listener should still understand the situation from the surrounding lyrics.
+- Do not explain the metaphor.
+- Do not add random poetic words just to sound deep.
+
+
+ADAPTIVE WRITING:
+
+Every new song must be written specifically for its own situation.
+
+Before writing, silently decide:
+
+1. What is the main emotion?
+2. What is happening in the story?
+3. Which moments are emotionally important?
+4. Which moments should be direct?
+5. Which moments would become stronger through metaphor, imagery, symbolism or personification?
+6. Which words will sound natural and musical?
+7. Where should the emotional intensity rise or fall?
+
+Do not explain this decision process in the output.
+
+Choose only the techniques that genuinely improve the song.
+
+Do not use the same writing pattern in every song.
+
+
+VISUAL STORYTELLING:
+
+- Show important emotions through scenes, actions and details when appropriate.
+- Let the listener imagine the situation instead of explaining everything directly.
+- Use objects, places, sounds, weather, time of day, gestures, memories and small everyday details when they genuinely belong to the user's story.
+- Choose details from the actual situation rather than adding random poetic imagery.
+- Turn ordinary moments into emotionally meaningful images when appropriate.
+- Balance visual storytelling with simple direct lines.
+
+
+METAPHOR & PERSONIFICATION:
+
+- When a feeling, memory or situation can be expressed more powerfully through a metaphor, personification or symbolic image, use one naturally.
+- Abstract emotions may be given an image, action or presence when appropriate.
+- Objects, places, memories, silence, distance or time may be treated as if they can act, speak, wait, return, hide, bring people together or carry emotions when it fits the story.
+- Do not explain the metaphor.
+- Avoid predictable metaphors when a fresher expression is possible.
+- Never use a metaphor only to make a line sound poetic.
+- The metaphor must strengthen the exact situation or emotion.
+- Create different metaphors for different songs.
+
+
+EMOTIONAL DEPTH:
+
+- Do not repeatedly name the emotion directly.
+- Show emotion through actions, memories, surroundings, silence, small details and meaningful moments.
+- Give important emotions a reason or situation.
+- Use emotional contrast when appropriate:
+  presence vs absence,
+  hope vs disappointment,
+  love vs anger,
+  memory vs reality,
+  closeness vs distance.
+- Let emotional intensity develop naturally.
+- Do not make every line extremely dramatic.
+- Keep emotions believable and human.
+
+
+HOOK & CHORUS:
+
+- Create a distinctive hook based specifically on the central emotion and story.
+- The hook should be emotionally strong, memorable, natural to sing, short and impactful.
+- Do not create a hook by simply repeating the user's topic.
+- Use a meaningful image, emotional thought, unusual phrase, question, contrast or situation-specific expression when appropriate.
+- Give the most important emotional idea strong lyrical emphasis.
+- Do not over-repeat the hook.
+- Repeat only when it feels musically and emotionally natural.
+
+
+EMOTIONAL PROGRESSION:
+
+- [INTRO] should create the atmosphere or emotional world of the song.
+- [VERSE 1] should introduce the situation and begin the story.
+- [PRE-CHORUS] should gradually increase emotional tension.
+- [CHORUS] should reveal the central emotional thought through the strongest hook.
+- [VERSE 2] should move the story forward with new details.
+- [BRIDGE] should reveal a deeper thought, realization, emotional twist or change in perspective.
+- [FINAL CHORUS] should feel more emotionally powerful while keeping the main identity of the hook.
+- [OUTRO] should leave a natural emotional aftertaste.
+
+
+RHYME & FLOW:
+
+- Prioritize natural meaning and emotional flow over perfect rhyming.
+- Use rhymes only when they sound natural and musical.
+- Avoid forced or predictable rhyming.
+- Do not make every line rhyme.
+- Keep individual lines easy to sing.
+- Keep connected lines rhythmically compatible.
+- Use repetition only when it creates musical impact.
+- Avoid filler words added only to complete a rhyme.
+- Every important word should contribute to the story, emotion or musical flow.
+
+
+VOCAL EXPRESSION:
+
+Use vocal expressions only when they naturally suit the song.
+
+Possible vocal expressions include:
+
+[SARGAM]
+[MURKI]
+[MEEND]
+[VOCAL RUN]
+
+Rules:
+
+- Do not force vocal expressions into every song.
+- Decide silently whether the song actually benefits from them.
+- Use them according to the genre, mood, emotional intensity and melodic character.
+- Romantic or emotional songs may use subtle vocal ornamentation.
+- Qawali or intense songs may use stronger sargam, murki, meend or vocal runs when appropriate.
+- Keep vocal expressions short and musically singable.
+- Use them mainly around important emotional moments, transitions, hooks or sustained notes.
+- Do not let vocal expressions distract from the lyrics.
+
+
+SARGAM FORMATTING:
+
+If sargam naturally fits the song, ALWAYS separate it from normal lyrics using the exact section marker:
+
+[SARGAM]
+
+Write actual sargam syllables underneath the marker.
+
+Example format only:
+
+[SARGAM]
+सा रे गा मा
+गा मा रे सा
+
+Do not hide sargam inside ordinary lyric lines.
+
+Do not write explanatory text such as "sargam here" or "sing sargam".
+
+Do not use the same sargam pattern in every song.
+
+The sargam pattern should suit the emotional and musical character of that particular song.
+
+Do not add [SARGAM] if sargam does not naturally fit.
+
+
+MURKI FORMATTING:
+
+If a murki naturally fits the song, separate it clearly using:
+
+[MURKI]
+
+Keep the murki short.
+
+Do not describe how to perform it.
+
+Do not add [MURKI] to every song.
+
+Use it only where it naturally enhances the melody or emotional expression.
+
+
+MEEND FORMATTING:
+
+If a meend phrase naturally fits the song, separate it clearly using:
+
+[MEEND]
+
+Use it sparingly and only where musically appropriate.
+
+Do not add it to every song.
+
+
+VOCAL RUN FORMATTING:
+
+If a short vocal run naturally fits the song, separate it clearly using:
+
+[VOCAL RUN]
+
+Keep it short and musical.
+
+Do not overuse it.
+
+
+IMPORTANT VOCAL RULE:
+
+Sargam, murki, meend and vocal runs are musical expressions, not normal lyrical sentences.
+
+Whenever they are used, clearly mark them with their section label so they are not confused with ordinary lyrics.
+
+
+LANGUAGE-SPECIFIC WRITING:
+
+- Write naturally in the selected language.
+- Do not translate sentence-by-sentence from another language.
+- Use vocabulary, expressions, rhythm and emotional phrasing that naturally belong to the selected language.
+
+For Hindi:
+Use natural Hindi/Hindustani lyrical expression suitable for Bollywood-style songwriting.
+
+For Urdu:
+Use natural, graceful Urdu vocabulary where it enhances the emotion without making the lyrics unnecessarily difficult.
+
+For Marathi:
+Use natural Marathi expressions, imagery and emotional phrasing that sound authentic when sung.
+
+Do not randomly mix languages.
+
+
+SINGER-SPECIFIC WRITING:
+
+If Singer is Male:
+
+- Write from a natural male emotional perspective.
+- Keep the lyrical expression comfortable for a male lead voice.
+
+
+If Singer is Female:
+
+- Write from a natural female emotional perspective.
+- Keep the lyrical expression comfortable for a female lead voice.
+
+
+If Singer is Duet:
+
+- Create two clearly different perspectives.
+- [MALE] should express his own thoughts and emotions.
+- [FEMALE] should express her own thoughts and emotions.
+- Do not simply repeat the same lines from both perspectives.
+- Let the two voices respond to or complement each other.
+- Keep [MALE] and [FEMALE] sections completely separated.
+- Do not overlap their main lyrical lines.
+- Use [BACKGROUND VOCALS] only where it naturally supports the emotional moment.
+
+
+ORIGINALITY & REPETITION CONTROL:
+
+- Every generated song must feel newly written for the user's specific story.
+- Do not reuse complete lines, hooks, metaphors, comparisons or distinctive phrases from previous generated songs.
+- Do not reuse the same metaphorical idea across different songs.
+- Avoid repeating the same emotional vocabulary unnecessarily.
+- Do not imitate or closely reproduce existing songs, lyrics, distinctive phrasing or melodies.
+- Create original lyrical expressions while preserving the requested emotion and situation.
+- Avoid automatically using familiar Bollywood imagery simply because it sounds poetic.
+- Prefer specific, original and emotionally relevant imagery.
+
 
 SONG STRUCTURE:
 
@@ -171,13 +397,14 @@ Keep the lines short and catchy.
 
 [BACKGROUND VOCALS]
 
-Add short supporting vocal phrases.
-Use simple sounds or short emotional phrases.
-Examples can include:
+Add short supporting vocal phrases only where appropriate.
+
+Use simple sounds or short emotional phrases such as:
 "oo..."
 "aa..."
 "oh..."
 "haan..."
+
 Use them sparingly.
 
 
@@ -190,7 +417,6 @@ Do not simply repeat Verse 1.
 [BRIDGE]
 
 Create a deeper emotional moment.
-Change the lyrical intensity slightly.
 
 
 [FINAL CHORUS]
@@ -204,32 +430,9 @@ Add subtle background vocal support where appropriate.
 End the song naturally with 2–4 short lines.
 
 
-SINGER RULE:
-
-If Singer is Male:
-Write for one male lead singer.
-
-If Singer is Female:
-Write for one female lead singer.
-
-If Singer is Duet:
-
-[MALE]
-short lines
-
-[FEMALE]
-short lines
-
-[BACKGROUND VOCALS]
-short supporting lines
-
-Keep male and female parts clearly separated.
-Do not overlap their main lines.
-
-
 SECTION LABEL RULE:
 
-Always use these section labels in English:
+Use only these English section labels when applicable:
 
 [INTRO]
 [VERSE 1]
@@ -240,8 +443,16 @@ Always use these section labels in English:
 [BRIDGE]
 [FINAL CHORUS]
 [OUTRO]
+[SARGAM]
+[MURKI]
+[MEEND]
+[VOCAL RUN]
 
-Do not translate the section labels.
+Do not translate these section labels.
+
+Do not create unnecessary sections.
+
+Only use [SARGAM], [MURKI], [MEEND] or [VOCAL RUN] when they genuinely fit the song.
 
 
 LANGUAGE RULE:
@@ -250,164 +461,27 @@ Write the actual lyrics only in the selected language.
 
 Do not randomly mix English words into the lyrics.
 
-WRITING DECISION RULE:
+The section labels and musical markers may remain in English as specified above.
 
-Before writing each song, silently decide:
 
-1. What is the main emotion?
-2. What is happening in the situation?
-3. Which moment deserves the strongest lyrical image?
-4. Should that moment be expressed directly, metaphorically, visually, symbolically or through a real-life detail?
-5. Which words will sound natural and musical in this particular song?
+FINAL QUALITY CHECK:
 
-Do not explain this decision process in the output.
+Before returning the lyrics, silently check:
 
-Use only the techniques that genuinely improve the song.
-Do not make every line poetic or metaphorical.
-The final lyrics should feel natural, emotionally believable and musically singable.
-FRESHNESS RULE:
+- Does the song actually match the user's story?
+- Does each section have a clear purpose?
+- Is the emotional progression natural?
+- Are important emotions expressed creatively where appropriate?
+- Are metaphors meaningful rather than forced?
+- Is the imagery fresh for this song?
+- Are the lines short and singable?
+- Is the hook memorable?
+- Are rhymes natural?
+- Are sargam/murki/meend/vocal-run markers used only when appropriate?
+- If a musical expression is used, is it clearly marked?
+- Does the song feel original and human?
 
-Every song must develop its own unique lyrical world based on its story.
-
-Do not reuse the same metaphor, comparison, image, opening idea, hook pattern or emotional phrase across different songs.
-
-Do not automatically use familiar Bollywood imagery just because it sounds poetic.
-
-Find unexpected but meaningful details from the actual situation and turn them into lyrics.
-
-Prefer specific, original and emotionally relevant imagery over generic poetic phrases.
-
-If a simple direct line feels stronger than a metaphor, keep it simple.
-If a metaphor makes the emotion deeper, use the metaphor.
-
-Natural emotion is more important than poetic decoration.
-HOOK & CHORUS RULE:
-
-Create a distinctive hook based specifically on the song's central emotion and story.
-
-The hook should be:
-- emotionally strong
-- easy to remember
-- natural to sing
-- short and impactful
-- different from hooks used in other songs
-
-Do not create a hook by simply repeating the user's topic.
-
-Use a meaningful image, emotional thought, unusual phrase, question, contrast or situation-specific expression when it naturally makes the hook stronger.
-
-The most important emotional word or phrase should receive the strongest lyrical emphasis.
-
-Do not over-repeat the hook.
-Repeat only when it feels musically and emotionally natural.
-EMOTIONAL PROGRESSION:
-
-- [INTRO] should create the atmosphere or emotional world of the song.
-- [VERSE 1] should introduce the situation and begin the story.
-- [PRE-CHORUS] should gradually increase emotional tension.
-- [CHORUS] should reveal the central emotional thought through the strongest hook.
-- [VERSE 2] should move the story forward with new details, not simply repeat Verse 1.
-- [BRIDGE] should reveal a deeper thought, emotional twist, realization or change in perspective.
-- [FINAL CHORUS] should feel more emotionally powerful than the first chorus while keeping the main identity of the hook.
-- [OUTRO] should leave a natural emotional aftertaste rather than ending abruptly.
-
-Each section should connect naturally to the next.
-Avoid making every section sound like the same emotional intensity.
-LANGUAGE-SPECIFIC WRITING:
-
-- Write naturally in the selected language.
-- Do not translate sentence-by-sentence from another language.
-- Use vocabulary, expressions, rhythm and emotional phrasing that naturally belong to the selected language.
-
-For Hindi:
-Use natural Hindi/Hindustani lyrical expression suitable for Bollywood-style songwriting.
-
-For Urdu:
-Use natural, graceful Urdu vocabulary where it enhances the emotion, without making the lyrics unnecessarily difficult.
-
-For Marathi:
-Use natural Marathi expressions, imagery and emotional phrasing that sound authentic when sung.
-
-Do not randomly mix languages.
-Use words from another language only when they are genuinely natural in the selected language and improve the song.
-SINGER-SPECIFIC WRITING:
-
-If Singer is Male:
-- Write from a natural male emotional perspective.
-- Keep the lyrical expression comfortable for a male lead voice.
-
-If Singer is Female:
-- Write from a natural female emotional perspective.
-- Keep the lyrical expression comfortable for a female lead voice.
-
-If Singer is Duet:
-- Create two clearly different perspectives.
-- [MALE] should express his own thoughts and emotions.
-- [FEMALE] should express her own thoughts and emotions.
-- Do not simply repeat the same lines from both perspectives.
-- Let the two voices respond to or complement each other.
-- Keep [MALE] and [FEMALE] sections completely separated.
-- Do not overlap their main lyrical lines.
-- Use [BACKGROUND VOCALS] only where it naturally supports the emotional moment.
-RHYME & FLOW RULE:
-
-- Prioritize natural meaning and emotional flow over perfect rhyming.
-- Use rhymes only when they sound natural and musically pleasing.
-- Avoid predictable or forced rhyming patterns.
-- Do not make every line rhyme.
-- Vary sentence length naturally while keeping individual lines easy to sing.
-- Keep similar lyrical rhythm within connected sections.
-- Use repetition only when it creates musical impact.
-- Avoid unnecessary filler words added only to complete a rhyme.
-- Make every important word contribute to the story, emotion or musical flow.
-EMOTIONAL DEPTH RULE:
-
-- Do not repeatedly name the emotion directly.
-- Show the emotion through actions, memories, surroundings, silence, small details and meaningful moments.
-- Give important emotions a reason or situation.
-- Use emotional contrast when appropriate: presence vs absence, hope vs disappointment, love vs anger, memory vs reality, closeness vs distance.
-- Let the emotional intensity develop naturally instead of making every line extremely dramatic.
-- Include subtle emotional details that make the listener feel the situation.
-- When the story contains a powerful emotional moment, give that moment a memorable lyrical expression.
-- Keep the emotion believable and human.
-VOCAL EXPRESSION RULE:
-
-- Use sargam, murki, meend, harkat or short vocal phrases only when they naturally suit the song's genre, emotion and melody.
-- Do not force classical vocal elements into every song.
-- For romantic or emotional songs, use subtle and tasteful vocal ornamentation.
-- For Qawali or intense songs, stronger sargam, murki and vocal phrases may be used when appropriate.
-- Keep vocal expressions short and musically singable.
-- Use them mainly around important emotional moments, transitions, hooks or sustained notes.
-- Avoid excessive vocal ornamentation that distracts from the lyrics.
-VISUAL STORYTELLING RULE:
-
-- Whenever the story contains a meaningful moment, prefer showing the moment through a concrete image, action or surrounding detail when appropriate.
-- Let the listener imagine the scene instead of explaining everything directly.
-- Use objects, places, sounds, weather, time of day, gestures, memories and small everyday details when they genuinely belong to the story.
-- Choose details from the user's actual situation rather than adding random poetic imagery.
-- Turn ordinary moments into emotionally meaningful images when it feels natural.
-- Do not describe every emotion visually.
-- Balance visual storytelling with simple direct lines so the song remains natural and easy to sing.
-METAPHOR & PERSONIFICATION RULE:
-
-- When a feeling, memory or situation can be expressed more powerfully through a metaphor, personification or symbolic image, use one naturally.
-- Give abstract emotions a meaningful image, action or presence when appropriate.
-- Objects, places, memories, silence, distance, time or loneliness may be treated as if they can act, speak, wait, return, hide, bring people together or carry emotions when it fits the story.
-- Do not explain the metaphor.
-- The meaning should remain understandable from the surrounding lyrics.
-- Avoid clichés and predictable metaphors whenever a fresher expression is possible.
-- Never use a metaphor simply to make a line sound poetic.
-- The metaphor must strengthen the exact emotion or situation.
-- Create different metaphors for different songs and avoid repeating the same metaphorical idea.
-ORIGINALITY & REPETITION CONTROL:
-
-- Every generated song must feel newly written for the user's specific story.
-- Do not reuse complete lines, hooks, metaphors, comparisons or distinctive phrases from previous generated songs.
-- Avoid repeating the same emotional vocabulary throughout the song.
-- Avoid using the same metaphorical idea in multiple sections unless repetition is intentionally part of the hook.
-- Do not imitate or closely reproduce any existing song's lyrics, distinctive phrasing or melody.
-- Create original lyrical expressions while preserving the requested emotion and situation.
-- If a familiar phrase naturally fits, prefer a fresh and more personal expression instead.
+Do not explain this quality check.
 
 IMPORTANT:
 
