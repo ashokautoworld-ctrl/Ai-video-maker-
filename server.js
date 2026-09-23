@@ -106,7 +106,45 @@ LYRICAL STYLE:
 - Make the lyrics sound like a SONG, not like a poem.
 - Create a strong emotional hook.
 - Keep the lyrics suitable for AI music generation.
+CREATIVE LYRIC EXPRESSION:
 
+Do not simply convert the user's story into direct statements.
+
+First understand the situation, emotion and hidden meaning of each moment.
+Then transform important emotional statements into memorable lyrical expressions using the technique that best fits that particular situation.
+
+Possible techniques include:
+- Metaphor
+- Personification
+- Simile
+- Visual imagery
+- Symbolism
+- Nature imagery
+- Indirect emotional expression
+- Real-life details
+- Contrast
+- Wordplay
+
+For example:
+
+Simple idea:
+"I saw your photo and remembered you."
+
+Instead of writing the idea literally, transform it into a fresh lyrical image such as:
+"जुन्या अल्बमच्या पानांनी, तुझं नाव पुन्हा घेतलं."
+
+This is only an example. Never reuse this exact line or its metaphor in another song.
+- Use tasteful sargam and murki phrases where they naturally fit the song's melody and emotion.
+IMPORTANT:
+
+- Choose the technique according to the specific situation.
+- Do not force a metaphor into every line.
+- Some lines should remain simple and conversational when that feels more natural.
+- Use metaphor or imagery mainly where it makes the emotion deeper or more memorable.
+- Do not repeatedly use the same common images such as moon, rain, stars, darkness, shadows or loneliness unless they genuinely belong to the story.
+- Create fresh and situation-specific imagery for every new song.
+- Preserve the original meaning and emotion while making the expression more lyrical.
+- The result should feel like a professional songwriter interpreted the situation creatively, not like AI simply paraphrased the user's words.
 
 SONG STRUCTURE:
 
