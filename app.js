@@ -3,6 +3,9 @@ const mood = document.getElementById("mood");
 const singer = document.getElementById("singer");
 const language = document.getElementById("language");
 const length = document.getElementById("length");
+const songStyle = document.getElementById("songStyle");
+const voiceFeel = document.getElementById("voiceFeel");
+const structure = document.getElementById("structure");
 
 const generateBtn = document.getElementById("generateBtn");
 const lyrics = document.getElementById("lyrics");
@@ -14,10 +17,10 @@ const regenerateBtn = document.getElementById("regenerateBtn");
 const newSongBtn = document.getElementById("newSongBtn");
 const clearBtn = document.getElementById("clearBtn");
 const projectList = document.getElementById("projectList");
-const songStyle = document.getElementById("songStyle");
-const voiceFeel = document.getElementById("voiceFeel");
-const structure = document.getElementById("structure");
+
+
 async function generateLyrics() {
+
   const songTopic = topic.value.trim();
 
   if (!songTopic) {
@@ -33,134 +36,259 @@ async function generateLyrics() {
   status.textContent = "AI is preparing your song...";
 
   try {
+
     const response = await fetch("/api/generate-lyrics", {
       method: "POST",
+
       headers: {
         "Content-Type": "application/json"
       },
-      
-body: JSON.stringify({
-  topic: songTopic,
-  mood: mood.value,
-  singer: singer.value,
-  language: language.value,
-  length: length.value,
-  songStyle: songStyle.value,
-  voiceFeel: voiceFeel.value
-})
+
+      body: JSON.stringify({
+        topic: songTopic,
+        mood: mood.value,
+        singer: singer.value,
+        language: language.value,
+        length: length.value,
+        songStyle: songStyle.value,
+        voiceFeel: voiceFeel.value,
+        structure: structure.value
+      })
+    });
+
     const data = await response.json();
 
     if (!response.ok || !data.success) {
-      throw new Error(data.message || "Lyrics generation failed.");
+      throw new Error(
+        data.message || "Lyrics generation failed."
+      );
     }
 
     lyrics.value = data.lyrics;
-    status.textContent = "✅ Lyrics generated successfully!";
+
+    status.textContent =
+      "✅ Lyrics generated successfully!";
+
   }
   catch (error) {
+
     console.error(error);
-    status.textContent = "❌ " + error.message;
+
+    status.textContent =
+      "❌ " + error.message;
+
   }
   finally {
+
     generateBtn.disabled = false;
     regenerateBtn.disabled = false;
 
-    gener kotent = "✨ Generate Lyrics";
-    regenerateBtn.textContent = "🔄 Regenerate Lyrics";
+    generateBtn.textContent =
+      "✨ Generate Lyrics";
+
+    regenerateBtn.textContent =
+      "🔄 Regenerate Lyrics";
   }
 }
 
-generateBtn.addEventListener("click", generateLyrics);
 
-regenerateBtn.addEventListener("click", generateLyrics);
+generateBtn.addEventListener(
+  "click",
+  generateLyrics
+);
 
 
-copyBtn.addEventListener("click", async () => {
-  const text = lyrics.value.trim();
+regenerateBtn.addEventListener(
+  "click",
+  generateLyrics
+);
 
-  if (!text) {
-    status.textContent = "⚠️ No lyrics to copy.";
-    return;
+
+copyBtn.addEventListener(
+  "click",
+  async () => {
+
+    const text = lyrics.value.trim();
+
+    if (!text) {
+      status.textContent =
+        "⚠️ No lyrics to copy.";
+      return;
+    }
+
+    try {
+
+      await navigator.clipboard.writeText(text);
+
+      status.textContent =
+        "✅ Lyrics copied!";
+
+    }
+    catch {
+
+      lyrics.select();
+
+      document.execCommand("copy");
+
+      status.textContent =
+        "✅ Lyrics copied!";
+    }
   }
+);
 
-  try {
-    await navigator.clipboard.writeText(text);
-    status.textContent = "✅ Lyrics copied!";
+
+saveBtn.addEventListener(
+  "click",
+  () => {
+
+    const text = lyrics.value.trim();
+
+    if (!text) {
+      status.textContent =
+        "⚠️ No lyrics to save.";
+      return;
+    }
+
+    const project = {
+
+      id: Date.now(),
+
+      topic: topic.value.trim(),
+
+      mood: mood.value,
+
+      singer: singer.value,
+
+      language: language.value,
+
+      length: length.value,
+
+      songStyle: songStyle.value,
+
+      voiceFeel: voiceFeel.value,
+
+      structure: structure.value,
+
+      lyrics: text,
+
+      date: new Date().toLocaleString()
+    };
+
+
+    let projects =
+      JSON.parse(
+        localStorage.getItem(
+          "aiLyricsProjects"
+        )
+      ) || [];
+
+
+    projects.unshift(project);
+
+
+    localStorage.setItem(
+      "aiLyricsProjects",
+      JSON.stringify(projects)
+    );
+
+
+    status.textContent =
+      "💾 Lyrics saved!";
+
+
+    showProjects();
   }
-  catch {
-    lyrics.select();
-    document.execCommand("copy");
-    status.textContent = "✅ Lyrics copied!";
+);
+
+
+clearBtn.addEventListener(
+  "click",
+  () => {
+
+    lyrics.value = "";
+
+    status.textContent =
+      "🗑️ Lyrics cleared.";
   }
-});
+);
 
 
-saveBtn.addEventListener("click", () => {
-  const text = lyrics.value.trim();
+newSongBtn.addEventListener(
+  "click",
+  () => {
 
-  if (!text) {
-    status.textContent = "⚠️ No lyrics to save.";
-    return;
+    topic.value = "";
+
+    lyrics.value = "";
+
+    mood.value = "Romantic";
+
+    singer.value = "Male";
+
+    language.value = "Hindi";
+
+    length.value = "Short";
+
+    songStyle.value = "Bollywood";
+
+    voiceFeel.value = "Natural";
+
+    structure.value = "Full Song";
+
+    status.textContent =
+      "✨ New song ready!";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
-
-  const project = {
-    id: Date.now(),
-    topic: topic.value.trim(),
-    mood: mood.value,
-    singer: singer.value,
-    language: language.value,
-    length: length.value,
-    lyrics: text,
-    structure: structure.value,
-    date: new Date().toLocaleString()
-    songStyle: songStyle.value,
-voiceFeel: voiceFeel.value,
-  };
-
-  let projects =
-    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
-
-  projects.unshift(project);
-
-  localStorage.setItem(
-    "aiLyricsProjects",
-    JSON.stringify(projects)
-  );
-
-  status.textContent = "💾 Lyrics saved!";
-  showProjects();
-});
-
-
-clearBtn.addEventListener("click", () => {
-  lyrics.value = "";
-  status.textContent = "🗑️ Lyrics cleared.";
-});
+);
 
 
 function showProjects() {
+
   const projects =
-    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
+    JSON.parse(
+      localStorage.getItem(
+        "aiLyricsProjects"
+      )
+    ) || [];
+
 
   if (projects.length === 0) {
+
     projectList.innerHTML =
       '<p class="empty">No lyrics saved yet.</p>';
+
     return;
   }
 
+
   projectList.innerHTML = "";
+
 
   projects.forEach(project => {
 
-    const item = document.createElement("div");
-    item.className = "project-item";
+    const item =
+      document.createElement("div");
+
+    item.className =
+      "project-item";
+
 
     item.innerHTML = `
-      <strong>🎵 ${escapeHTML(project.topic)}</strong>
 
-      <p>${escapeHTML(project.lyrics)}</p>
+      <strong>
+        🎵 ${escapeHTML(project.topic)}
+      </strong>
+
+      <p>
+        ${escapeHTML(project.lyrics)}
+      </p>
 
       <small style="color:#666;">
+
         ${escapeHTML(project.mood)}
         •
         ${escapeHTML(project.singer)}
@@ -168,24 +296,32 @@ function showProjects() {
         ${escapeHTML(project.language)}
         •
         ${escapeHTML(project.date)}
+
       </small>
+
 
       <div class="project-actions">
 
         <button
           class="open-project"
           onclick="openProject(${project.id})">
+
           📂 Open / Edit
+
         </button>
+
 
         <button
           class="delete-project"
           onclick="deleteProject(${project.id})">
+
           🗑️ Delete
+
         </button>
 
       </div>
     `;
+
 
     projectList.appendChild(item);
   });
@@ -195,22 +331,53 @@ function showProjects() {
 function openProject(id) {
 
   const projects =
-    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
+    JSON.parse(
+      localStorage.getItem(
+        "aiLyricsProjects"
+      )
+    ) || [];
 
-  const project = projects.find(p => p.id === id);
+
+  const project =
+    projects.find(
+      p => p.id === id
+    );
+
 
   if (!project) return;
 
-  topic.value = project.topic;
-  mood.value = project.mood;
-  singer.value = project.singer;
-  language.value = project.language;
-  length.value = project.length;
-  songStyle.value = project.songStyle || "Bollywood";
-voiceFeel.value = project.voiceFeel || "Natural";
-  lyrics.value = project.lyrics;
 
-  status.textContent = "📂 Lyrics opened for editing.";
+  topic.value =
+    project.topic;
+
+  mood.value =
+    project.mood;
+
+  singer.value =
+    project.singer;
+
+  language.value =
+    project.language;
+
+  length.value =
+    project.length;
+
+  songStyle.value =
+    project.songStyle || "Bollywood";
+
+  voiceFeel.value =
+    project.voiceFeel || "Natural";
+
+  structure.value =
+    project.structure || "Full Song";
+
+  lyrics.value =
+    project.lyrics;
+
+
+  status.textContent =
+    "📂 Lyrics opened for editing.";
+
 
   window.scrollTo({
     top: 0,
@@ -222,23 +389,38 @@ voiceFeel.value = project.voiceFeel || "Natural";
 function deleteProject(id) {
 
   const confirmDelete =
-    confirm("Delete this saved lyrics?");
+    confirm(
+      "Delete this saved lyrics?"
+    );
+
 
   if (!confirmDelete) return;
 
-  let projects =
-    JSON.parse(localStorage.getItem("aiLyricsProjects")) || [];
 
-  projects = projects.filter(
-    project => project.id !== id
-  );
+  let projects =
+    JSON.parse(
+      localStorage.getItem(
+        "aiLyricsProjects"
+      )
+    ) || [];
+
+
+  projects =
+    projects.filter(
+      project =>
+        project.id !== id
+    );
+
 
   localStorage.setItem(
     "aiLyricsProjects",
     JSON.stringify(projects)
   );
 
-  status.textContent = "🗑️ Lyrics deleted.";
+
+  status.textContent =
+    "🗑️ Lyrics deleted.";
+
 
   showProjects();
 }
@@ -246,28 +428,13 @@ function deleteProject(id) {
 
 function escapeHTML(text) {
 
-  const div = document.createElement("div");
+  const div =
+    document.createElement("div");
 
   div.textContent = text;
 
   return div.innerHTML;
 }
 
-newSongBtn.addEventListener("click", () => {
-structure.value = "Full Song";
-  topic.value = "";
-  lyrics.value = "";
 
-  mood.value = "Romantic";
-  singer.value = "Male";
-  language.value = "Hindi";
-  length.value = "Short";
-
-  status.textContent = "✨ New song ready!";
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
 showProjects();
