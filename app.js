@@ -26,7 +26,7 @@ const lyricsMode =
   document.getElementById("lyricsMode").value;
 
 const existingLyrics =
-  lyrics.value.trim();
+  lyrics.value.trim() || topic.value.trim();
 
 if (lyricsMode === "Write From Story") {
 
