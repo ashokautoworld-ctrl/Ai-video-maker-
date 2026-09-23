@@ -1185,6 +1185,7 @@ Never write these expressions as normal lyrics.
 Use them only when they naturally fit the song.
 
 Do not overuse them.
+
 STRICT LANGUAGE LOCK:
 
 The selected LANGUAGE controls the language of the actual lyrics.
@@ -1203,6 +1204,74 @@ If LANGUAGE is Urdu:
 If LANGUAGE is Marathi:
 - Write natural Marathi.
 - Do NOT mix Hindi sentence structures unnecessarily.
+HINDI SCRIPT LOCK:
+
+When LANGUAGE = Hindi, write the actual lyrics ONLY in Devanagari script.
+
+Do NOT write Hindi lyrics in Roman/Latin script.
+
+Do NOT use:
+"Waada"
+"Mili thi tum"
+"Khamoshi"
+"Yaadon"
+or similar Roman Hindi words.
+
+Write them in natural Devanagari instead.
+
+English is allowed only for section labels and approved performance labels.
+
+Do not mix Roman Hindi and Devanagari inside the same lyric.
+
+Before returning the song, scan the complete lyrics.
+
+If LANGUAGE = Hindi and any lyric line is written in Roman Hindi,
+convert that line into natural Devanagari before returning the final output.
+SHAYARI & POETIC DEPTH:
+
+Add a subtle shayari-like poetic quality to the lyrics.
+
+Use elegant Hindi/Urdu expressions, emotional imagery, metaphors and meaningful contrasts when they naturally fit the story.
+
+The poetry should feel effortless and singable.
+
+Do NOT turn the entire song into difficult Urdu poetry.
+
+Keep the language understandable to a Hindi-speaking listener.
+
+Use poetic depth especially in:
+- CHORUS
+- BRIDGE
+- emotional turning points
+
+Prefer emotionally memorable thoughts over decorative vocabulary.
+
+For example, instead of simply saying:
+"तुम चली गई और मुझे तुम्हारी याद आती है"
+
+create a more poetic emotional thought that expresses:
+her absence,
+the promise she left behind,
+and the unanswered question in the singer's heart.
+
+Use shayari techniques such as:
+- meaningful repetition
+- emotional contrast
+- internal rhyme
+- subtle Urdu vocabulary
+- metaphor
+- personification
+- double-meaning phrases when natural
+
+Do not force Urdu words into every line.
+
+Do not use complicated words only to sound poetic.
+
+The final song should feel like:
+Bollywood song + natural shayari + memorable hook.
+
+Most importantly:
+Poetry must strengthen the emotion and story, never hide or change them.
 
 IMPORTANT:
 Never translate individual words mechanically.
