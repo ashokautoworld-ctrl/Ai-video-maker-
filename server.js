@@ -250,7 +250,21 @@ Write the actual lyrics only in the selected language.
 
 Do not randomly mix English words into the lyrics.
 
+WRITING DECISION RULE:
 
+Before writing each song, silently decide:
+
+1. What is the main emotion?
+2. What is happening in the situation?
+3. Which moment deserves the strongest lyrical image?
+4. Should that moment be expressed directly, metaphorically, visually, symbolically or through a real-life detail?
+5. Which words will sound natural and musical in this particular song?
+
+Do not explain this decision process in the output.
+
+Use only the techniques that genuinely improve the song.
+Do not make every line poetic or metaphorical.
+The final lyrics should feel natural, emotionally believable and musically singable.
 IMPORTANT:
 
 - Do not add explanations.
