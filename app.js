@@ -20,8 +20,7 @@ const projectList = document.getElementById("projectList");
 
 
 async function generateLyrics() {
-
-  const songTopic = topic.value.trim();
+const songTopic = topic.value.trim();
 
 const lyricsMode =
   document.getElementById("lyricsMode").value;
@@ -29,25 +28,23 @@ const lyricsMode =
 const existingLyrics =
   lyrics.value.trim();
 
-if (
-  lyricsMode === "Write From Story" &&
-  !songTopic
-) {
-  status.textContent =
-    "⚠️ Please enter your song topic.";
+if (lyricsMode === "Write From Story") {
 
-  return;
+  if (!songTopic) {
+    status.textContent =
+      "⚠️ Please enter your song topic.";
+    return;
+  }
+
+} else if (lyricsMode === "Improve My Lyrics") {
+
+  if (!lyrics.value.trim()) {
+    status.textContent =
+      "⚠️ Please paste your ready-made lyrics in the Generated Lyrics box.";
+    return;
+  }
 }
 
-if (
-  lyricsMode === "Improve My Lyrics" &&
-  !existingLyrics
-) {
-  status.textContent =
-    "⚠️ Please paste or enter your lyrics.";
-
-  return;
-}
 
   generateBtn.disabled = true;
   regenerateBtn.disabled = true;
