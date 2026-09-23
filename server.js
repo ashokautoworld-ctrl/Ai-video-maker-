@@ -277,6 +277,7 @@ Never copy the first chorus word-for-word.
 Keep the central hook recognizable, but evolve the surrounding lines.
 
 The final chorus should feel like the emotional conclusion of everything the song has built.
+
 LANGUAGE NATURALNESS:
 
 Write Hindi as naturally spoken and sung by a native Hindi songwriter.
@@ -286,6 +287,63 @@ Do not translate ideas word-by-word.
 Do not create sentences that are grammatically possible but emotionally unnatural.
 
 If a poetic line sounds unnatural in normal conversation, rewrite it into a more natural lyrical expression.
+
+EMOTIONAL CORE LOCK:
+
+Before writing, silently reduce the user's story to ONE emotional sentence.
+
+Keep that emotional truth unchanged throughout the entire song.
+
+For this type of story, distinguish carefully between:
+
+WHAT HAPPENED:
+She understood his pain.
+She promised not to leave.
+He trusted that promise.
+She later left suddenly without explaining why.
+
+WHAT HE FEELS NOW:
+He remembers the promise.
+He cannot understand why she left.
+The unanswered question still hurts.
+
+Never confuse these two.
+
+Do not change a memory into an event.
+
+Do not change a promise into a conversation that never happened.
+
+Do not change "she left without explanation" into "she rejected him", "they fought", "she betrayed him", or any other invented event.
+
+CENTRAL EMOTIONAL CONTRADICTION:
+
+Look for the emotional contradiction inside the story.
+
+Example:
+
+"The person who gave me the confidence that she would stay
+became the person whose leaving I cannot understand."
+
+Use this type of emotional contradiction as inspiration for the hook.
+
+Do not copy the example sentence.
+
+Create an original lyrical expression from the actual story.
+
+HOOK DEPTH:
+
+The hook should not only say that the person left.
+
+It should capture WHY the leaving hurts.
+
+The deepest wound may be:
+the promise,
+the trust created by that promise,
+or the unanswered question left behind.
+
+Choose the strongest one for the song.
+
+The hook should express the emotional wound, not merely describe the event.
 
 STORY FACT CHECK:
 
