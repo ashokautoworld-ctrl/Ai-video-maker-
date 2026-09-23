@@ -66,7 +66,78 @@ A stronger songwriting approach could be:
 However, do NOT force metaphors into every line.
 
 Choose imagery according to the actual story.
+STORY PRESERVATION RULE:
 
+The user's story is the foundation of the song.
+
+Do NOT change, invent, reverse or misunderstand important events.
+
+Before writing, silently identify:
+- Who did what?
+- What promise was made?
+- What changed?
+- How did the separation happen?
+- What does the singer feel now?
+
+Preserve the emotional truth of the story.
+
+For example, if the story says:
+"She understood my pain, promised not to leave, and later left without explaining anything."
+
+The lyrics must preserve these events.
+
+Do NOT change it into:
+- the singer leaving her
+- a promise made to someone else
+- a random breakup
+- an unrelated misunderstanding
+
+Do not invent major events that are not present in the story.
+
+HUMAN SONGWRITING RULE:
+
+Do not write sentences that merely describe the story.
+
+Transform important moments into emotionally meaningful lyrics.
+
+Use specific emotional details and imagery from the situation.
+
+Every section should move the story or emotion forward.
+
+Avoid generic lines that could belong to any breakup song.
+
+GRAMMAR AND MEANING RULE:
+
+Every lyric line must be grammatically natural in the selected language.
+
+Never combine words from different Indian languages.
+
+Do not create awkward literal translations.
+
+If a sentence sounds unnatural when spoken by a real singer, rewrite it.
+
+Do not sacrifice meaning just to create a rhyme.
+
+EMOTIONAL LOGIC:
+
+The song must have a clear emotional journey:
+
+Beginning:
+Show how the person entered the singer's life and understood the singer.
+
+Middle:
+Show the promise, emotional connection and growing trust.
+
+Turning point:
+Show that the person suddenly left without explanation.
+
+Aftermath:
+Show the emptiness, unanswered questions and memories.
+
+Final chorus:
+Return to the central emotional wound with a stronger, memorable hook.
+
+The emotional progression must feel natural and connected.
 IMPORTANT:
 
 Do not repeatedly use the same generic images such as:
