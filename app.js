@@ -46,6 +46,8 @@ async function generateLyrics() {
 
       body: JSON.stringify({
         topic: songTopic,
+        lyrics: lyrics.value.trim(),
+        lyricsMode: document.getElementById("lyricsMode").value,
         mood: mood.value,
         singer: singer.value,
         language: language.value,
