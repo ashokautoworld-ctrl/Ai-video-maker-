@@ -23,10 +23,31 @@ async function generateLyrics() {
 
   const songTopic = topic.value.trim();
 
-  if (!songTopic) {
-    status.textContent = "⚠️ Please enter your song topic.";
-    return;
-  }
+const lyricsMode =
+  document.getElementById("lyricsMode").value;
+
+const existingLyrics =
+  lyrics.value.trim();
+
+if (
+  lyricsMode === "Write From Story" &&
+  !songTopic
+) {
+  status.textContent =
+    "⚠️ Please enter your song topic.";
+
+  return;
+}
+
+if (
+  lyricsMode === "Improve My Lyrics" &&
+  !existingLyrics
+) {
+  status.textContent =
+    "⚠️ Please paste or enter your lyrics.";
+
+  return;
+}
 
   generateBtn.disabled = true;
   regenerateBtn.disabled = true;
