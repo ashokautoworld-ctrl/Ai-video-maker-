@@ -244,5 +244,21 @@ function escapeHTML(text) {
   return div.innerHTML;
 }
 
+newSongBtn.addEventListener("click", () => {
 
+  topic.value = "";
+  lyrics.value = "";
+
+  mood.value = "Romantic";
+  singer.value = "Male";
+  language.value = "Hindi";
+  length.value = "Short";
+
+  status.textContent = "✨ New song ready!";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 showProjects();
