@@ -543,7 +543,7 @@ ${topic}
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${apiKey}`,
-          "HTTP-Referer": "https://ai-video-maker.onrender.com",
+          "HTTP-Referer": "https://ai-video-maker-3.onrender.com",
           "X-Title": "AI Lyrics Maker"
         },
 
