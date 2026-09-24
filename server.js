@@ -490,7 +490,19 @@ Use their natural Hindi equivalents instead:
 तुम्हारा, तुम्हारी, तुम्हारे
 तुम्हें, तुमसे, तुम्हारे साथ
 तुम्हारे बिना
+CRITICAL OVERRIDE:
 
+The USER STORY language does NOT determine the output language.
+
+The SELECTED LANGUAGE is the ONLY language allowed for actual lyrics.
+
+If LANGUAGE = Hindi, translate the emotional meaning of the story into Hindi BEFORE writing the song.
+
+Never copy Marathi words, Marathi grammar, Marathi verb forms,
+or Marathi sentence structure from the user story into the Hindi lyrics.
+
+The user's story may be written in Marathi, Hindi, Urdu, English,
+or any other language. This must NEVER change the selected lyric language.
 IMPORTANT:
 Do not translate Marathi grammar word-by-word into Hindi.
 
