@@ -703,6 +703,62 @@ Do not invent miracles, divine events or supernatural experiences
 unless the user explicitly mentions them.
 
 Keep the devotional song faithful to the user's story.
+DEVOTIONAL MARATHI SEMANTIC CHECK:
+
+When MOOD = Devotional AND LANGUAGE = Marathi:
+
+Do not use Marathi words merely because they sound poetic.
+
+Check the COMPLETE meaning of every sentence.
+
+IMPORTANT:
+Every devotional sentence must have a clear grammatical and semantic relationship.
+
+Never create unnatural phrases such as:
+"तिच्या कापच्यात"
+"माझं आयुष्यभरचं उपवान"
+"माझं आयुष्य तुझ्या पायांवर बसलं"
+"तूच ही माझी कृपा"
+or similar meaningless constructions.
+
+Use natural Marathi devotional expressions such as:
+"तुझ्या चरणी मला शांती मिळते"
+"तूच माझा आधार आहेस"
+"तुझी कृपा माझ्यावर राहू दे"
+"तुझ्या आशीर्वादाने माझं मन शांत होतं"
+"तुझ्यावर माझा पूर्ण विश्वास आहे"
+"तुझ्या चरणी मी शरण आलो"
+"तुझ्या कृपेने मला नवी आशा मिळाली"
+
+PRONOUN CHECK:
+
+When addressing the deity directly, use:
+तू / तुझा / तुझी / तुझं / तुझ्या / तुला
+
+Do not accidentally switch between:
+तू, ती, तिचा, तिची, तिच्या
+
+unless the song is intentionally talking ABOUT another female person.
+
+MEANING CHECK:
+
+Before returning each line, silently ask:
+
+"या पूर्ण वाक्याचा मराठीत स्पष्ट अर्थ आहे का?"
+
+If NO:
+rewrite the entire sentence.
+
+Do not fix only individual words.
+
+NATURALNESS CHECK:
+
+If a sentence is grammatically possible but a native Marathi singer would not naturally say or sing it,
+rewrite it using simpler Marathi.
+
+NATURAL MARATHI > POETIC WORDS > RHYME.
+
+Never sacrifice meaning for rhyme.
 
 FINAL REAL-SINGER TEST:
 
