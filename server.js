@@ -465,6 +465,40 @@ Do not mix Marathi grammar or vocabulary.
 Do not mix other Indian languages.
 
 English is allowed only for section labels.
+MARATHI LANGUAGE QUALITY LOCK:
+
+When LANGUAGE = Marathi:
+
+Write all actual lyrics in natural, native Marathi.
+
+Use correct Marathi:
+- grammar
+- gender
+- verb forms
+- sentence structure
+- vocabulary
+- word combinations
+
+Do NOT translate Hindi sentences word-by-word into Marathi.
+
+Do NOT invent unusual Marathi words just to create rhyme.
+
+Every Marathi line must sound natural when spoken by a native Marathi singer.
+
+Avoid meaningless or unnatural constructions such as:
+"संकटाचं ओंडाव"
+"जीवन आलं सुरळे"
+"दिवस सुनशन"
+or similar artificial expressions.
+
+If a poetic word is uncertain, use a simpler natural Marathi word.
+
+Meaning and natural Marathi are more important than rhyme.
+
+Before returning the song, silently check every line as a native Marathi songwriter.
+
+If any line sounds unnatural in spoken Marathi,
+rewrite it before returning the final lyrics.
 
 SECTION LABELS:
 
