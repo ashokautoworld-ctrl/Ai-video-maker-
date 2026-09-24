@@ -533,6 +533,53 @@ Do not use Hindi constructions inside Marathi.
 Never use Hindi words such as:
 तेरी, मेरी, तेरा, मेरा, क्यों, अगर, फिर, दिल
 when Marathi is selected, unless the user explicitly asks for Hindi words.
+MARATHI GRAMMAR CORRECTION:
+
+Before returning the song, actively check common Marathi agreement errors.
+
+Correct:
+माझा → masculine nouns
+माझी → feminine nouns
+माझं → neuter nouns
+
+तुझा / तुझी / तुझं
+तुमचा / तुमची / तुमचं
+
+आव्हान मोठं
+आयुष्य बदललं
+मन शांत झालं
+कृपा झाली
+आशा निर्माण झाली
+
+Use correct Marathi verb forms:
+
+मी उभा राहिलो
+ती उभी राहिली
+मी जाईन
+ती येईल
+मी धरून ठेवीन
+
+Never use a Hindi grammatical structure translated into Marathi.
+
+If a sentence requires complex grammar,
+rewrite it into a simpler natural Marathi sentence.
+
+IMPORTANT:
+
+Do not return a line merely because its words are individually Marathi.
+
+The COMPLETE SENTENCE must sound naturally Marathi.
+
+A line that is grammatically correct but unnatural in spoken Marathi
+must still be rewritten.
+
+FINAL RULE:
+
+When in doubt between:
+1. poetic but unnatural Marathi
+2. simple and natural Marathi
+
+ALWAYS choose simple and natural Marathi.
 
 SEMANTIC CHECK:
 
