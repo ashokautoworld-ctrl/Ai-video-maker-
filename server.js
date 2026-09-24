@@ -465,6 +465,50 @@ Do not mix Marathi grammar or vocabulary.
 Do not mix other Indian languages.
 
 English is allowed only for section labels.
+HINDI NATIVE LANGUAGE HARD LOCK:
+
+When LANGUAGE = Hindi:
+
+Write all actual lyrics in natural native Hindi only.
+
+Use ONLY:
+- natural Hindi grammar
+- natural Hindi sentence structure
+- Hindi/Urdu vocabulary commonly used in Bollywood songs
+
+Do NOT use Marathi grammar, Marathi sentence structure,
+or Marathi possessive forms.
+
+Never use Marathi forms such as:
+माझं, माझी, माझा
+तुझं, तुझी, तुझा
+तुमचं, तुमची, तुमचा
+तुम्हाकडे, तुझ्याविना
+
+Use their natural Hindi equivalents instead:
+मेरा, मेरी, मेरे
+तुम्हारा, तुम्हारी, तुम्हारे
+तुम्हें, तुमसे, तुम्हारे साथ
+तुम्हारे बिना
+
+IMPORTANT:
+Do not translate Marathi grammar word-by-word into Hindi.
+
+Before returning the lyrics, scan EVERY lyric line.
+
+If any line sounds like Marathi translated into Hindi,
+rewrite the COMPLETE line in natural Hindi.
+
+HINDI NATIVE SPEAKER TEST:
+
+Imagine a native Hindi-speaking Bollywood songwriter reading every line.
+
+If the line sounds unnatural in Hindi,
+rewrite it before returning the final lyrics.
+
+Natural Hindi > rhyme.
+Natural Hindi > poetic complexity.
+Meaning > rhyme.
 MARATHI LANGUAGE QUALITY LOCK:
 
 When LANGUAGE = Marathi:
