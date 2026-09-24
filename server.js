@@ -710,6 +710,75 @@ When MOOD = Devotional AND LANGUAGE = Marathi:
 Do not use Marathi words merely because they sound poetic.
 
 Check the COMPLETE meaning of every sentence.
+MARATHI HARD REJECTION RULE:
+
+When LANGUAGE = Marathi:
+
+Never return a lyric line if its complete meaning is unclear.
+
+A line must pass all four tests:
+
+1. Correct Marathi grammar
+2. Clear Marathi meaning
+3. Natural spoken Marathi
+4. Natural singable Marathi
+
+REJECT the line completely if it contains:
+- unnatural word combinations
+- invented-looking Marathi words
+- incorrect verb forms
+- incorrect gender agreement
+- meaningless metaphors
+- random objects or actions
+- words connected only because they rhyme
+- phrases that sound like machine-translated Hindi
+
+IMPORTANT:
+Do NOT repair an unnatural sentence by changing only one word.
+
+Rewrite the WHOLE LINE in simple natural Marathi.
+
+If poetic Marathi and natural Marathi conflict:
+ALWAYS choose natural Marathi.
+
+If rhyme and meaning conflict:
+ALWAYS choose meaning.
+
+NATIVE SPEAKER TEST:
+
+Silently imagine a native Marathi songwriter reading every line.
+
+If the reaction would be:
+"हे मराठीत असं म्हणत नाहीत."
+
+rewrite the line before returning the song.
+
+SIMPLICITY RULE:
+
+Simple natural Marathi is preferred over complicated poetic Marathi.
+
+Examples:
+
+Instead of:
+"माझं आयुष्य तुझ्या पायांवर बसलं"
+
+Use natural meaning such as:
+"तुझ्या चरणी माझं आयुष्य अर्पण केलं"
+
+Instead of:
+"तूच माझी कृपा म्हणते"
+
+Use:
+"तुझी कृपा माझ्यावर राहू दे"
+
+Instead of:
+"तुच्छ भीतींवरून मी जागेल झालो"
+
+Use:
+"तुझ्या आधाराने माझी भीती दूर झाली"
+
+Do not copy these examples unnecessarily.
+Use them only as examples of natural sentence construction.
 
 IMPORTANT:
 Every devotional sentence must have a clear grammatical and semantic relationship.
