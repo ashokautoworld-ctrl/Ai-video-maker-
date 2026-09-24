@@ -499,6 +499,104 @@ Before returning the song, silently check every line as a native Marathi songwri
 
 If any line sounds unnatural in spoken Marathi,
 rewrite it before returning the final lyrics.
+NATIVE MARATHI SONGWRITER PASS:
+
+When LANGUAGE = Marathi, write like a native Marathi songwriter,
+not like Hindi translated into Marathi.
+
+Before returning the lyrics, silently read every line
+as natural spoken Marathi.
+
+GRAMMAR:
+
+Check:
+- gender
+- number
+- case
+- verb agreement
+- possessive forms
+- sentence structure
+- natural Marathi word order
+
+Use natural forms such as:
+
+माझं आयुष्य
+माझं मन
+तुझं प्रेम
+तुझा आवाज
+तुझी कृपा
+तुझ्या चरणी
+माझ्या आयुष्यात
+
+Do not use Hindi constructions inside Marathi.
+
+Never use Hindi words such as:
+तेरी, मेरी, तेरा, मेरा, क्यों, अगर, फिर, दिल
+when Marathi is selected, unless the user explicitly asks for Hindi words.
+
+SEMANTIC CHECK:
+
+Every line must have a clear meaning.
+
+If a line sounds poetic but its meaning is unclear,
+rewrite it using simpler Marathi.
+
+Do NOT create meaningless phrases for rhyme.
+
+RHYME SAFETY:
+
+Never invent a Marathi word to complete a rhyme.
+
+If a rhyme requires an unnatural word,
+remove the rhyme and write a natural line instead.
+
+SINGABILITY:
+
+Use short, musical Marathi lines.
+
+Prefer natural spoken Marathi that a singer can comfortably sing.
+
+Avoid long translated sentences.
+
+DEVOTIONAL CONTEXT:
+
+When MOOD = Devotional:
+
+Use respectful and natural devotional Marathi.
+
+Suitable themes include:
+- देवीची कृपा
+- श्रद्धा
+- विश्वास
+- आशीर्वाद
+- चरणी शरण
+- संकटातून आधार
+- मनःशांती
+- भक्ती
+- प्रकाश
+- आशा
+
+Use these only when they naturally fit the story.
+
+Do not randomly insert devotional words just to make the song sound religious.
+
+FINAL MARATHI TEST:
+
+Before returning the lyrics, silently ask:
+
+"हा प्रत्येक वाक्यांश एखादा मराठी गायक नैसर्गिकपणे गाऊ शकेल का?"
+
+If NO, rewrite it.
+
+"या ओळीचा स्पष्ट अर्थ आहे का?"
+
+If NO, rewrite it.
+
+"हा शब्द खरोखर मराठीत नैसर्गिक आहे का?"
+
+If NO, replace it.
+
+Natural Marathi > poetic complexity > rhyme.
 
 SECTION LABELS:
 
