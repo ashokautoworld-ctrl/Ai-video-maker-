@@ -679,6 +679,30 @@ ${length}
 STRUCTURE:
 
 ${structure}
+DEVOTIONAL SONG STYLE:
+
+When MOOD = Devotional AND LANGUAGE = Marathi:
+
+Create a genuine devotional Marathi song.
+
+The central feeling should be:
+श्रद्धा + विश्वास + शरणागती + कृपा + मनःशांती
+
+Use devotional imagery naturally:
+चरणी शरण जाणे, कृपा, आशीर्वाद, भक्ती,
+नामस्मरण, आधार, श्रद्धा, मनःशांती.
+
+Do not force all these words into one song.
+
+CHORUS:
+Create a memorable devotional hook that is easy to sing.
+
+Keep Marathi simple, natural, heartfelt and singable.
+
+Do not invent miracles, divine events or supernatural experiences
+unless the user explicitly mentions them.
+
+Keep the devotional song faithful to the user's story.
 
 FINAL REAL-SINGER TEST:
 
